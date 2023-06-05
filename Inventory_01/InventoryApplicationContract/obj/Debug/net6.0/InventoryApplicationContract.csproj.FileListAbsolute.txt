@@ -1,0 +1,12 @@
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplicationContract\bin\Debug\net6.0\InventoryApplicationContract.deps.json
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplicationContract\bin\Debug\net6.0\InventoryApplicationContract.dll
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplicationContract\bin\Debug\net6.0\ref\InventoryApplicationContract.dll
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplicationContract\bin\Debug\net6.0\InventoryApplicationContract.pdb
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplicationContract\obj\Debug\net6.0\InventoryApplicationContract.csproj.AssemblyReference.cache
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplicationContract\obj\Debug\net6.0\InventoryApplicationContract.GeneratedMSBuildEditorConfig.editorconfig
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplicationContract\obj\Debug\net6.0\InventoryApplicationContract.AssemblyInfoInputs.cache
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplicationContract\obj\Debug\net6.0\InventoryApplicationContract.AssemblyInfo.cs
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplicationContract\obj\Debug\net6.0\InventoryApplicationContract.csproj.CoreCompileInputs.cache
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplicationContract\obj\Debug\net6.0\InventoryApplicationContract.dll
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplicationContract\obj\Debug\net6.0\ref\InventoryApplicationContract.dll
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplicationContract\obj\Debug\net6.0\InventoryApplicationContract.pdb

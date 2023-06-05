@@ -1,0 +1,12 @@
+D:\aspinventoryproject\Inventory_01\Inventory_01\Framework\bin\Debug\net6.0\Framework.deps.json
+D:\aspinventoryproject\Inventory_01\Inventory_01\Framework\bin\Debug\net6.0\Framework.dll
+D:\aspinventoryproject\Inventory_01\Inventory_01\Framework\bin\Debug\net6.0\ref\Framework.dll
+D:\aspinventoryproject\Inventory_01\Inventory_01\Framework\bin\Debug\net6.0\Framework.pdb
+D:\aspinventoryproject\Inventory_01\Inventory_01\Framework\obj\Debug\net6.0\Framework.GeneratedMSBuildEditorConfig.editorconfig
+D:\aspinventoryproject\Inventory_01\Inventory_01\Framework\obj\Debug\net6.0\Framework.AssemblyInfoInputs.cache
+D:\aspinventoryproject\Inventory_01\Inventory_01\Framework\obj\Debug\net6.0\Framework.AssemblyInfo.cs
+D:\aspinventoryproject\Inventory_01\Inventory_01\Framework\obj\Debug\net6.0\Framework.csproj.CoreCompileInputs.cache
+D:\aspinventoryproject\Inventory_01\Inventory_01\Framework\obj\Debug\net6.0\Framework.dll
+D:\aspinventoryproject\Inventory_01\Inventory_01\Framework\obj\Debug\net6.0\ref\Framework.dll
+D:\aspinventoryproject\Inventory_01\Inventory_01\Framework\obj\Debug\net6.0\Framework.pdb
+D:\aspinventoryproject\Inventory_01\Inventory_01\Framework\obj\Debug\net6.0\Framework.csproj.AssemblyReference.cache

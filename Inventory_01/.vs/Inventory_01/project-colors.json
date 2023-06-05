@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "efd4dbb1-43fe-4a36-ab63-915f0ad7122a": {
+      "ProjectGuid": "efd4dbb1-43fe-4a36-ab63-915f0ad7122a",
+      "DisplayName": "Inventory.Domin",
+      "ColorIndex": 0
+    },
+    "3d9aab4e-85e1-4ef6-9ffd-c2586238ee04": {
+      "ProjectGuid": "3d9aab4e-85e1-4ef6-9ffd-c2586238ee04",
+      "DisplayName": "HostService",
+      "ColorIndex": 1
+    },
+    "279f4645-efb3-4c72-a6c0-b0309fb26728": {
+      "ProjectGuid": "279f4645-efb3-4c72-a6c0-b0309fb26728",
+      "DisplayName": "Framework",
+      "ColorIndex": 2
+    },
+    "b4eb6de0-8d7d-4958-af8a-96555bdb4abb": {
+      "ProjectGuid": "b4eb6de0-8d7d-4958-af8a-96555bdb4abb",
+      "DisplayName": "Invetory01.Infrastructure",
+      "ColorIndex": 3
+    },
+    "5793dd83-2a6f-4d01-891c-303de52714ac": {
+      "ProjectGuid": "5793dd83-2a6f-4d01-891c-303de52714ac",
+      "DisplayName": "InventoryApplication",
+      "ColorIndex": 4
+    },
+    "6526f7c5-ddf8-4afa-88ad-50a2ac64aaa5": {
+      "ProjectGuid": "6526f7c5-ddf8-4afa-88ad-50a2ac64aaa5",
+      "DisplayName": "InventoryApplicationContract",
+      "ColorIndex": 5
+    },
+    "357e95a7-f43d-486b-8c1b-d0c88c6b11b9": {
+      "ProjectGuid": "357e95a7-f43d-486b-8c1b-d0c88c6b11b9",
+      "DisplayName": "inventory.InfrastructureCore",
+      "ColorIndex": 6
+    }
+  },
+  "NextColorIndex": 7
+}

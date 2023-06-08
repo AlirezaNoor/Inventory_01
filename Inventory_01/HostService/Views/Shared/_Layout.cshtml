@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="RTL">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -228,7 +228,7 @@
                                 <li><a href="productlist.html">لیست محصولات</a></li>
                                 <li><a href="addproduct.html">افزودن کالا</a></li>
                                 <li><a  asp-controller="Categores" asp-action="Index">لیست دسته بندی ها</a></li>
-                                <li><a href="addcategory.html">افزودن دستبندی</a></li>
+                                <li><a  asp-action="CreateCategories" asp-controller="Categores">افزودن دستبندی</a></li>
                                 <li><a href="subcategorylist.html">لیست زیر دسته بندی ها</a></li>
                                 <li><a href="subaddcategory.html">افزودن زیر دسته بندی</a></li>
                                 <li><a href="brandlist.html">لیست برند ها</a></li>
@@ -438,8 +438,27 @@
             @RenderBody();
         </div>
     </div>
+    
 
-    <script src="~/assets/js/jquery-3.6.0.min.js"></script>
+
+<div class="modal fade" id="MyModalSeccuse" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">موضوعات</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body" id="MyModelSuccessAlertbody">
+                this is my body
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
 
     <script src="~/assets/js/feather.min.js"></script>
 

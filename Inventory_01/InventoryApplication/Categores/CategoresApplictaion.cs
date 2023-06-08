@@ -33,7 +33,8 @@ namespace InventoryApplication.Categores
             {
                 CategoryName = x.CategoryName,
                 CategoryCode = x.CategoryCode,
-                Descirption = x.Descirption
+                Descirption = x.Descirption,
+                Id = x.Id
             }).ToList();
         }
 

@@ -1,12 +1,8 @@
-﻿@model InventoryApplicationContract.Categores.CreateCategores
+﻿@model InventoryApplicationContract.Categores.EditCategores
+
 <div class="page-wrapper">
     <div class="content">
-@*        @if (ViewBag.Message != null)
-        {
-*@
-
-@*        }
-*@        <div class="page-header">
+        <div class="page-header">
             <div class="page-title">
                 <h4>افزودن دسته بندی کالا</h4>
                 <h6>دسته بندی کالای جدید تعریف کنید</h6>
@@ -22,6 +18,7 @@
                             <div class="form-group">
                                 <label>نام دسته بندی</label>
                                 <input type="text" asp-for="CategoryName">
+                                <input type="hidden" asp-for="Id">
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6 col-12">
@@ -48,3 +45,5 @@
 
     </div>
 </div>
+
+ 

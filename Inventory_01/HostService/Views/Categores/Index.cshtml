@@ -1,18 +1,18 @@
 ﻿@model List<InventoryApplicationContract.Categores.viewModel>
 <div class="page-wrapper">
-<div class="content">
+    <div class="content">
 
-           <div class="page-header">
+        <div class="page-header">
             <div class="page-title">
-            <h4>لیست دسته بندی محصولات</h4>
-            <h6>جستوجوی دسته بندی</h6>
+                <h4>لیست دسته بندی محصولات</h4>
+                <h6>جستوجوی دسته بندی</h6>
             </div>
             <div class="page-btn">
-            <a href="addcategory.html" class="btn btn-added">
-            <img src="~/assets/img/icons/plus.svg" class="me-1" alt="img">افزودن دسته بندی
-            </a>
+                <a asp-action="CreateCategories" asp-controller="Categores" class="btn btn-added">
+                    <img src="~/assets/img/icons/plus.svg" class="me-1" alt="img">افزودن دسته بندی
+                </a>
             </div>
-            </div>
+        </div>
 
         <div class="card">
             <div class="card-body">
@@ -79,12 +79,14 @@
                                     <td>@item.CategoryCode</td>
                                     <td>@item.Descirption</td>
                                     <td>
-                                        <a class="me-3" href="editcategory.html">
+
+                                        <a class="me-3" asp-route-id="@item.Id" asp-action="Editecategorey" asp-controller="Categores">
                                             <img src="~/assets/img/icons/edit.svg" alt="img">
                                         </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
+                                        <a href="@Url.Action("DeleteCategory", "Categores", new { Id = item.Id })">
                                             <img src="~/assets/img/icons/delete.svg" alt="img">
                                         </a>
+
                                     </td>
                                 </tr>
                             }
@@ -94,6 +96,27 @@
             </div>
         </div>
 
-</div>
+    </div>
 </div>
 
+@section Scripts
+{
+
+<script type="text/javascript">
+
+    function openseccessmodal(strMassege){
+    var mydiv=document.getElementById("MyModelSuccessAlertbody")  ;
+    mydiv.innerHTML=strMassege;
+    $('#MyModalSeccuse').modal('show');
+
+    }
+    $(document).ready(function(){
+    var msg="@TempData["successMassege"]";
+    if(msg)
+        openseccessmodal(msg);
+
+
+    });
+</script>
+
+}

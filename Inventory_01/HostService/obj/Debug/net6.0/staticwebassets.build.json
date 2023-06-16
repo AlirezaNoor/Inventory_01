@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3N9isxEjWGpqiLEXEaaQ0YxvByp+hksNkzcTnKLNvws=",
+  "Hash": "SqujOvdWz8zN9eLWLoZVXLeD9Wp3kFFeznxviVRl0Ko=",
   "Source": "HostService",
   "BasePath": "_content/HostService",
   "Mode": "Default",
@@ -8872,6 +8872,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Img\\Brand\\11sdsdsdswewee.jpg"
+    },
+    {
+      "Identity": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\11sdsdsdsweweevcvvc.jpg",
+      "SourceId": "HostService",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\",
+      "BasePath": "_content/HostService",
+      "RelativePath": "Img/Brand/11sdsdsdsweweevcvvc.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Brand\\11sdsdsdsweweevcvvc.jpg"
+    },
+    {
+      "Identity": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\fdfdf.jpg",
+      "SourceId": "HostService",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\",
+      "BasePath": "_content/HostService",
+      "RelativePath": "Img/Brand/fdfdf.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Brand\\fdfdf.jpg"
     },
     {
       "Identity": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\sdsdsdswewee.jpg",

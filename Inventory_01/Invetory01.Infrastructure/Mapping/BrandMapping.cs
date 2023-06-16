@@ -15,6 +15,7 @@ namespace Invetory01.Infrastructure.Mapping
         {
             builder.ToTable("Brands");
             builder.HasKey(x => x.Id);
+            builder.HasMany(x => x.Products).WithOne(x => x.Brand).HasForeignKey(x => x.brand);
         }
     }
 }

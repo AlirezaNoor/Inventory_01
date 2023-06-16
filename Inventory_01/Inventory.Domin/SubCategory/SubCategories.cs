@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Framework;
 using Inventory.Domin.CategoryAgg;
+using Inventory.Domin.Product;
 
 namespace Inventory.Domin.SubCategory
 {
@@ -15,11 +16,8 @@ namespace Inventory.Domin.SubCategory
         public long CubCategorycode { get; private set; }
         public long CategoryRef { get; private set; }
         public Categores Category { get; private set; }
+ 
 
-        protected SubCategories(Categores category)
-        {
-            Category = category;
-        }
 
         public SubCategories(string name, string description, long cubCategorycode, long categoryRef)
         {

@@ -1,0 +1,89 @@
+﻿@model List<InventoryApplicationContract.SubCategoryContract.SubCategoryViewModel>
+<div class="page-wrapper">
+    <div class="content">
+        <div class="page-header">
+            <div class="page-title">
+                <h4>لیست زیر دسته بندی</h4>
+                <h6>زیر سته بندی</h6>
+            </div>
+            <div class="page-btn">
+                <a href="subaddcategory.html" class="btn btn-added"><img src="assets/img/icons/plus.svg" class="me-2" alt="img"> افزودن زیر دسته بندی</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table class="table  datanew">
+                        <thead>
+                        <tr>
+                            <th>
+                                <label class="checkboxs">
+                                    <input type="checkbox" id="select-all">
+                                    <span class="checkmarks"></span>
+                                </label>
+                            </th>
+                            <th>دستبدی</th>
+                            <th>دسته بندی والد</th>
+                            <th>کد دسته بندی ها</th>
+                            <th>توضیحات</th>
+                            <th>عملیات</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <label class="checkboxs">
+                                        <input type="checkbox">
+                                        <span class="checkmarks"></span>
+                                    </label>
+                                </td>
+
+                                <td>@item.Name</td>
+                                <td>@item.Categoryname</td>
+                                <td>@item.CubCategorycode</td>
+                                <td>@item.Description</td>
+                                <td>
+                                    <a class="me-3" href="editsubcategory.html">
+                                        <img src="assets/img/icons/edit.svg" alt="img">
+                                    </a>
+                                    <a class="me-3 confirm-text" href="javascript:void(0);">
+                                        <img src="assets/img/icons/delete.svg" alt="img">
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts
+{
+
+    <script type="text/javascript">
+
+    function openseccessmodal(strMassege){
+    var mydiv=document.getElementById("MyModelSuccessAlertbody")  ;
+    mydiv.innerHTML=strMassege;
+    $('#MyModalSeccuse').modal('show');
+
+    }
+    $(document).ready(function(){
+    var msg="@TempData["successMassege"]";
+    if(msg)
+        openseccessmodal(msg);
+
+
+    });
+</script>
+
+}

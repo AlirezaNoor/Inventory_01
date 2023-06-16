@@ -66,5 +66,15 @@ namespace InventoryApplication.Categores
 
 
         }
+
+        public List<viewModel> categoryseletor()
+        {
+
+            return _reposetoory.GetAll().Select(x => new viewModel()
+            {
+                Id = x.Id,
+                CategoryName = x.CategoryName
+            }).ToList();
+        }
     }
 }

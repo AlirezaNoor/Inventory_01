@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.16">
       <PrivateAssets>all</PrivateAssets>
@@ -20,6 +21,10 @@
     <ProjectReference Include="..\Inventory.Domin\Inventory.Domin.csproj" />
     <ProjectReference Include="..\inventory.InfrastructureCore\inventory.InfrastructureCore.csproj" />
     <ProjectReference Include="..\Invetory01.Infrastructure\Invetory01.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Img\Brand\" />
   </ItemGroup>
 
 </Project>

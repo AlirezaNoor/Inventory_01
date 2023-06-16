@@ -1,0 +1,127 @@
+﻿@model List<InventoryApplicationContract.BrandApplicationContract.BrandViewModel>
+<div class="page-wrapper">
+    <div class="content">
+        <div class="page-header">
+            <div class="page-title">
+                <h4>لیست برند ها</h4>
+
+            </div>
+            <div class="page-btn">
+                <a asp-controller="Brand" asp-action="Create" class="btn btn-added"><img src="assets/img/icons/plus.svg" class="me-2" alt="img">افزودن برند</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="table-top">
+
+                    <div class="wordset">
+                        <ul>
+                            <li>
+                                <a data-bs-toggle="tooltip" data-bs-placement="top" title="pdf"><img src="assets/img/icons/pdf.svg" alt="img"></a>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="tooltip" data-bs-placement="top" title="excel"><img src="assets/img/icons/excel.svg" alt="img"></a>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="tooltip" data-bs-placement="top" title="print"><img src="assets/img/icons/printer.svg" alt="img"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" id="filter_inputs">
+                    <div class="card-body pb-0">
+                        <div class="row">
+                            <div class="col-lg-3 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Brand Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Brand Description">
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-sm-6 col-12 ms-auto">
+                                <div class="form-group">
+                                    <a class="btn btn-filters ms-auto"><img src="assets/img/icons/search-whites.svg" alt="img"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table datanew">
+                        <thead>
+                        <tr>
+                            <th>
+                                <label class="checkboxs">
+                                    <input type="checkbox" id="select-all">
+                                    <span class="checkmarks"></span>
+                                </label>
+                            </th>
+                            <th>عکس</th>
+                            <th>نام برند</th>
+                            <th>توضیحات برند</th>
+                            <th>عملیات</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <label class="checkboxs">
+                                        <input type="checkbox">
+                                        <span class="checkmarks"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <a class="product-img">
+                                        <img src= "~/Img/Brand/@(item.name + ".jpg")" alt="product">
+                                    </a>
+                                </td>
+                                <td>@item.name</td>
+                                <td>@item.descrption</td>
+                                <td>
+                                    <a class="me-3" href=@Url.Action("Edited","Brand",new{id=item.Id})>
+                                        <img src="assets/img/icons/edit.svg" alt="img">
+                                    </a>
+                                    <a class="me-3 confirm-text" href="javascript:void(0);">
+                                        <img src="assets/img/icons/delete.svg" alt="img">
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts
+{
+
+    <script type="text/javascript">
+
+    function openseccessmodal(strMassege){
+    var mydiv=document.getElementById("MyModelSuccessAlertbody")  ;
+    mydiv.innerHTML=strMassege;
+    $('#MyModalSeccuse').modal('show');
+
+    }
+    $(document).ready(function(){
+    var msg="@TempData["successMassege"]";
+    if(msg)
+        openseccessmodal(msg);
+
+
+    });
+</script>
+
+}

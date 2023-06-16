@@ -14,5 +14,6 @@ namespace InventoryApplicationContract.Categores
         
         EditCategores edited (long id);
         void EditedRecordes(EditCategores command);
+        List<viewModel> categoryseletor();
     }
 }

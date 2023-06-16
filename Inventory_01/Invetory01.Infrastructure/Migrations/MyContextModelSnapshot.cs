@@ -22,6 +22,30 @@ namespace Invetory01.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Inventory.Domin.Brand.BrandAgg", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("desicription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Brands", (string)null);
+                });
+
             modelBuilder.Entity("Inventory.Domin.CategoryAgg.Categores", b =>
                 {
                     b.Property<long>("Id")
@@ -49,6 +73,54 @@ namespace Invetory01.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categores", (string)null);
+                });
+
+            modelBuilder.Entity("Inventory.Domin.SubCategory.SubCategories", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("CategoryRef")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("CubCategorycode")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryRef");
+
+                    b.ToTable("SubCategories", (string)null);
+                });
+
+            modelBuilder.Entity("Inventory.Domin.SubCategory.SubCategories", b =>
+                {
+                    b.HasOne("Inventory.Domin.CategoryAgg.Categores", "Category")
+                        .WithMany("SubCategories")
+                        .HasForeignKey("CategoryRef")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Inventory.Domin.CategoryAgg.Categores", b =>
+                {
+                    b.Navigation("SubCategories");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Inventory.Domin.Brand;
 using Inventory.Domin.CategoryAgg;
+using Inventory.Domin.SubCategory;
 using Invetory01.Infrastructure.Mapping;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,10 +13,14 @@ namespace Invetory01.Infrastructure.Db_Context
         }
 
         public DbSet<Categores> categores { get; set; }
+        public DbSet<SubCategories> SubCategories { get; set; }
+        public DbSet<BrandAgg> brand { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CategoryMapping());
+            modelBuilder.ApplyConfiguration(new SubCategoryMapping()); 
+            modelBuilder.ApplyConfiguration(new BrandMapping()); 
         }
     }
 }

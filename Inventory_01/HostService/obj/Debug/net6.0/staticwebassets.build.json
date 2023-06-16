@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zzvzu6wdn6f625w77Y+4ltgT2JLqdlIt0dUPSM/pyL0=",
+  "Hash": "3N9isxEjWGpqiLEXEaaQ0YxvByp+hksNkzcTnKLNvws=",
   "Source": "HostService",
   "BasePath": "_content/HostService",
   "Mode": "Default",
@@ -8855,6 +8855,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\11sdsdsdswewee.jpg",
+      "SourceId": "HostService",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\",
+      "BasePath": "_content/HostService",
+      "RelativePath": "Img/Brand/11sdsdsdswewee.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Brand\\11sdsdsdswewee.jpg"
+    },
+    {
+      "Identity": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\sdsdsdswewee.jpg",
+      "SourceId": "HostService",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\",
+      "BasePath": "_content/HostService",
+      "RelativePath": "Img/Brand/sdsdsdswewee.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Brand\\sdsdsdswewee.jpg"
     },
     {
       "Identity": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",

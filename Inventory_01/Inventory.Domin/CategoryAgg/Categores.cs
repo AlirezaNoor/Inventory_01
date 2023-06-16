@@ -1,4 +1,5 @@
 ﻿using Framework;
+using Inventory.Domin.SubCategory;
 
 namespace Inventory.Domin.CategoryAgg
 {
@@ -7,6 +8,7 @@ namespace Inventory.Domin.CategoryAgg
         public string CategoryName { get; private set; }
         public long CategoryCode { get; private set; }
         public string Descirption { get; private set; }
+        public List<SubCategories> SubCategories { get; private set; }
 
 
         public Categores(string categoryName, long categoryCode, string descirption)

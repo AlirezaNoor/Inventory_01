@@ -229,10 +229,10 @@
                                 <li><a href="addproduct.html">افزودن کالا</a></li>
                                 <li><a  asp-controller="Categores" asp-action="Index">لیست دسته بندی ها</a></li>
                                 <li><a  asp-action="CreateCategories" asp-controller="Categores">افزودن دستبندی</a></li>
-                                <li><a href="subcategorylist.html">لیست زیر دسته بندی ها</a></li>
-                                <li><a href="subaddcategory.html">افزودن زیر دسته بندی</a></li>
-                                <li><a href="brandlist.html">لیست برند ها</a></li>
-                                <li><a href="addbrand.html">افزودن برند</a></li>
+                                <li><a  asp-controller="SubCategory" asp-action="Index">لیست زیر دسته بندی ها</a></li>
+                                <li><a asp-controller="SubCategory" asp-action="CreateSubCategory">افزودن زیر دسته بندی</a></li>
+                                <li><a  asp-action="Index" asp-controller="Brand">لیست برند ها</a></li>
+                                <li><a asp-controller="Brand" asp-action="Create">افزودن برند</a></li>
                                 <li><a href="importproduct.html">افزودن کالا</a></li>
                                 <li><a href="barcode.html">پرینت بارکد</a></li>
                             </ul>

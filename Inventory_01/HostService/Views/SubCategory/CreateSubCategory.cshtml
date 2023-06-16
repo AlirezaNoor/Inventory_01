@@ -1,0 +1,117 @@
+﻿@model InventoryApplicationContract.SubCategoryContract.CreateSubCategory
+@*<div class="page-wrapper">
+    <div class="content">
+        <div class="page-header">
+            <div class="page-title">
+                <h4>دسته بندی های محصول</h4>
+                <h6>یک دسته بندی جدید بسازید</h6>
+            </div>
+        </div>
+
+
+            
+            <div class="card">
+                <div class="card-body">
+                    <form method="post">
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>دسته بندی والد</label>
+                                <select class="select" asp-for="CategoryRef" asp-items="Model.select">
+                                    <option >Choose Category</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>اسم دسته بندی</label>
+                                <input type="text" asp-for="Name">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>کد دسته بندی</label>
+                                <input type="text" asp-for="CubCategorycode">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>توضیحات</label>
+                                <textarea class="form-control" asp-for="Description"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="submit" class="btn btn-submit me-2" placeholder="ثبت">
+                            <a class="btn btn-cancel" asp-action="Index">بازگشت به لیست</a>
+                        </div>
+                    </div>
+                    </form>
+
+                </div>
+            </div>
+      
+
+    </div>
+</div>*@
+
+
+<div class="page-wrapper">
+    <div class="content">
+        @*        @if (ViewBag.Message != null)
+            {
+        *@
+
+        @*        }
+        *@        <div class="page-header">
+            <div class="page-title">
+                <h4>افزودن دسته بندی کالا</h4>
+                <h6>دسته بندی کالای جدید تعریف کنید</h6>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <form method="post">
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>نام دسته بندی</label>
+                                <input type="text" asp-for="Name">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>کد دسته بندی</label>
+                                <input type="text" asp-for="CubCategorycode">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>توضیحات</label>
+                                <textarea class="form-control" asp-for="Description"></textarea>
+                            </div>
+                        </div>
+                        <div class=" col-12">
+                            <div class="form-group">
+                                <label>دسته بندی والد</label>
+                                <select  asp-for="CategoryRef" asp-items="Model.select">
+                                    <option >Choose Category</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <input type="submit" class="btn btn-submit me-2" placeholder="ثبت">
+                            <a class="btn btn-cancel" asp-action="Index">بازگشت به لیست</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -18,4 +18,8 @@
     <ProjectReference Include="..\InventoryApplicationContract\InventoryApplicationContract.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Product\" />
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SqujOvdWz8zN9eLWLoZVXLeD9Wp3kFFeznxviVRl0Ko=",
+  "Hash": "SO6rXWPpLd6/M2qAee9XU1IlBJEXCs7Hgw8CgHviqYg=",
   "Source": "HostService",
   "BasePath": "_content/HostService",
   "Mode": "Default",
@@ -8874,6 +8874,23 @@
       "OriginalItemSpec": "wwwroot\\Img\\Brand\\11sdsdsdswewee.jpg"
     },
     {
+      "Identity": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\11sdsdsdswewee11.jpg",
+      "SourceId": "HostService",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\",
+      "BasePath": "_content/HostService",
+      "RelativePath": "Img/Brand/11sdsdsdswewee11.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Brand\\11sdsdsdswewee11.jpg"
+    },
+    {
       "Identity": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\11sdsdsdsweweevcvvc.jpg",
       "SourceId": "HostService",
       "SourceType": "Discovered",
@@ -8906,6 +8923,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Img\\Brand\\fdfdf.jpg"
+    },
+    {
+      "Identity": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\mosi.jpg",
+      "SourceId": "HostService",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\",
+      "BasePath": "_content/HostService",
+      "RelativePath": "Img/Brand/mosi.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Brand\\mosi.jpg"
     },
     {
       "Identity": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\sdsdsdswewee.jpg",

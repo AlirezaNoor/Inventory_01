@@ -1,6 +1,5 @@
 D:\aspinventoryproject\Inventory_01\Inventory_01\Inventory.Domin\bin\Debug\net6.0\Inventory.Domin.deps.json
 D:\aspinventoryproject\Inventory_01\Inventory_01\Inventory.Domin\bin\Debug\net6.0\Inventory.Domin.dll
-D:\aspinventoryproject\Inventory_01\Inventory_01\Inventory.Domin\bin\Debug\net6.0\ref\Inventory.Domin.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\Inventory.Domin\bin\Debug\net6.0\Inventory.Domin.pdb
 D:\aspinventoryproject\Inventory_01\Inventory_01\Inventory.Domin\bin\Debug\net6.0\Framework.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\Inventory.Domin\bin\Debug\net6.0\InventoryApplicationContract.dll
@@ -17,3 +16,4 @@ D:\aspinventoryproject\Inventory_01\Inventory_01\Inventory.Domin\obj\Debug\net6.
 D:\aspinventoryproject\Inventory_01\Inventory_01\Inventory.Domin\obj\Debug\net6.0\Inventory.Domin.pdb
 D:\aspinventoryproject\Inventory_01\Inventory_01\Inventory.Domin\bin\Debug\net6.0\Inventory.Domin.runtimeconfig.json
 D:\aspinventoryproject\Inventory_01\Inventory_01\Inventory.Domin\obj\Debug\net6.0\Inventory.Domin.genruntimeconfig.cache
+D:\aspinventoryproject\Inventory_01\Inventory_01\Inventory.Domin\obj\Debug\net6.0\refint\Inventory.Domin.dll

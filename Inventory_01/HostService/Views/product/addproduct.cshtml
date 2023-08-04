@@ -1,0 +1,117 @@
+﻿@model productModels;
+
+<div class="page-wrapper">
+    <div class="content">
+        <div class="page-header">
+            <div class="page-title">
+                <h4>Product Add</h4>
+                <h6>Create new product</h6>
+            </div>
+        </div>
+
+        <form method="post" asp-action="addproduct">
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>نام محصول</label>
+                                <input type="text" asp-for="@Model.CreatePorducts.ProductName">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label> دسته بندی</label>
+                                <select class="" asp-items="@Model.Category_view_model" asp-for="@Model.CreatePorducts.categoriesref">
+                                    <option>Choose Category</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>زیر دسته بندی</label>
+                                <select class="" asp-items="@Model.subCategory_view_model" asp-for="@Model.CreatePorducts.subcategoriesref">
+                                    <option>Choose Sub Category</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>برند</label>
+                                <select class="" asp-items="@Model.brnd_view_model" asp-for="@Model.CreatePorducts.brand">
+                                    <option>Choose Brand</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>واحد سنجش</label>
+                                <select class="" asp-items="@Model.Unit_list" asp-for="@Model.CreatePorducts.unitref">
+                                    <option>Choose Unit</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>SKU شناسه </label>
+                                <input type="text" asp-for="@Model.CreatePorducts.Sku">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>نقطه سنفارش</label>
+                                <input type="text" asp-for="@Model.CreatePorducts.minmuimQty">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>تعداد</label>
+                                <input type="text" asp-for="@Model.CreatePorducts.Qty">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>مالیات</label>
+                                <select class="" asp-for="@Model.CreatePorducts.Tax">
+                                    <option value="0">ندارد</option>
+                                    <option value="9">9%</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label> تخفیف </label>
+                                <input type="text" asp-for="@Model.CreatePorducts.Discuont">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>قیمت کالا</label>
+                                <input type="text" asp-for="@Model.CreatePorducts.price">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label> وضعیت</label>
+                                <select class="" asp-for="@Model.CreatePorducts.statuse">
+                                    <option value="1"> موجود</option>
+                                    <option value="0">ناموجود</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="submit"  class="btn btn-submit me-2"> 
+                            <a href="productlist.html" class="btn btn-cancel">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>

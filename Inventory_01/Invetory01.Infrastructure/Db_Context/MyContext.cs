@@ -2,6 +2,7 @@
 using Inventory.Domin.CategoryAgg;
 using Inventory.Domin.Product;
 using Inventory.Domin.SubCategory;
+using Inventory.Domin.Units;
 using Invetory01.Infrastructure.Mapping;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,7 @@ namespace Invetory01.Infrastructure.Db_Context
         public DbSet<SubCategories> SubCategories { get; set; }
         public DbSet<BrandAgg> brand { get; set; }
         public DbSet<ProductsAgg> Products { get; set; }
+        public DbSet<Unit> unit { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +26,8 @@ namespace Invetory01.Infrastructure.Db_Context
             modelBuilder.ApplyConfiguration(new SubCategoryMapping()); 
             modelBuilder.ApplyConfiguration(new BrandMapping()); 
             modelBuilder.ApplyConfiguration(new ProductMapping());
+            modelBuilder.ApplyConfiguration(new UnitMapping());
+
         }
     }
 }

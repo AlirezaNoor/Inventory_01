@@ -4,7 +4,7 @@ using Invetory01.Infrastructure.Db_Context;
 
 namespace Invetory01.Infrastructure.Reposetory
 {
-    public class ProductReposetory: GenericReposetores<ProductsAgg,long>
+    public class ProductReposetory: GenericReposetores<ProductsAgg,long>,IProductReposetory
     {
         private readonly MyContext context;
 

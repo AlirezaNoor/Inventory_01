@@ -5,7 +5,6 @@ D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\bin\Debug\net6.0\Ho
 D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\bin\Debug\net6.0\HostService.deps.json
 D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\bin\Debug\net6.0\HostService.runtimeconfig.json
 D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\bin\Debug\net6.0\HostService.dll
-D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\bin\Debug\net6.0\ref\HostService.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\bin\Debug\net6.0\HostService.pdb
 D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -84,3 +83,9 @@ D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\bin\Debug\net6.0\Mi
 D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\obj\Debug\net6.0\HostService.MvcApplicationPartsAssemblyInfo.cs
+D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\obj\Debug\net6.0\staticwebassets\msbuild.HostService.Microsoft.AspNetCore.StaticWebAssets.props
+D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\obj\Debug\net6.0\staticwebassets\msbuild.build.HostService.props
+D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.HostService.props
+D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.HostService.props
+D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\obj\Debug\net6.0\staticwebassets.pack.json
+D:\aspinventoryproject\Inventory_01\Inventory_01\HostService\obj\Debug\net6.0\refint\HostService.dll

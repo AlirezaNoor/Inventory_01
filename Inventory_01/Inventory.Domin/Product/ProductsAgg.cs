@@ -20,9 +20,10 @@ namespace Inventory.Domin.Product
         public long statuse { get; private set; }
         public Categores Category { get; private set; }
         public BrandAgg Brand { get; private set; }
+        public long subcategoriesref { get; private set; }
 
 
-        public ProductsAgg(string productName, long categoriesref,  long brand, long unitref, string sku, decimal qty, decimal minmuimQty, long tax, long discuont, decimal price, long statuse)
+        public ProductsAgg(string productName, long categoriesref, long brand, long unitref, string sku, decimal qty, decimal minmuimQty, long tax, long discuont, decimal price, long statuse, long subcategoriesref)
         {
             ProductName = productName;
             this.categoriesref = categoriesref;
@@ -35,12 +36,13 @@ namespace Inventory.Domin.Product
             Discuont = discuont;
             this.price = price;
             this.statuse = statuse;
+            this.subcategoriesref = subcategoriesref;
         }
 
-        public void Edited(string productName, long categoryref, long brand, long unitref, string sku, decimal qty, decimal minmuimQty, long tax, long discuont, decimal price, long statuse)
+        public void Edited(string productName, long categoriesref, long brand, long unitref, string sku, decimal qty, decimal minmuimQty, long tax, long discuont, decimal price, long statuse, long subcategoriesref)
         {
             ProductName = productName;
-            this.categoriesref = categoryref;
+            this.categoriesref = categoriesref;
             this.brand = brand;
             this.unitref = unitref;
             Sku = sku;
@@ -50,6 +52,7 @@ namespace Inventory.Domin.Product
             Discuont = discuont;
             this.price = price;
             this.statuse = statuse;
+            this.subcategoriesref = subcategoriesref;
         }
     }
 }

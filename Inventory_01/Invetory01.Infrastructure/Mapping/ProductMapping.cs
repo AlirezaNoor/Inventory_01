@@ -18,7 +18,6 @@ namespace Invetory01.Infrastructure.Mapping
             builder.HasOne(x => x.Category).WithMany(x => x.Products).HasForeignKey(x => x.categoriesref);
             builder.HasOne(x => x.Brand).WithMany(x => x.Products).HasForeignKey(x => x.brand);
 
-
         }
     }
 }

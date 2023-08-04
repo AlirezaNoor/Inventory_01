@@ -1,6 +1,5 @@
 D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplication\bin\Debug\net6.0\InventoryApplication.deps.json
 D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplication\bin\Debug\net6.0\InventoryApplication.dll
-D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplication\bin\Debug\net6.0\ref\InventoryApplication.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplication\bin\Debug\net6.0\InventoryApplication.pdb
 D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplication\bin\Debug\net6.0\Framework.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplication\bin\Debug\net6.0\Inventory.Domin.dll
@@ -17,3 +16,4 @@ D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplication\obj\Debug\
 D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplication\obj\Debug\net6.0\InventoryApplication.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplication\obj\Debug\net6.0\ref\InventoryApplication.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplication\obj\Debug\net6.0\InventoryApplication.pdb
+D:\aspinventoryproject\Inventory_01\Inventory_01\InventoryApplication\obj\Debug\net6.0\refint\InventoryApplication.dll

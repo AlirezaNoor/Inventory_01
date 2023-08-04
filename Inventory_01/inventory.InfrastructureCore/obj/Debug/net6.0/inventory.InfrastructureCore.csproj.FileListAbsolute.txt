@@ -1,6 +1,5 @@
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bin\Debug\net6.0\inventory.InfrastructureCore.deps.json
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bin\Debug\net6.0\inventory.InfrastructureCore.dll
-D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bin\Debug\net6.0\ref\inventory.InfrastructureCore.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bin\Debug\net6.0\inventory.InfrastructureCore.pdb
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bin\Debug\net6.0\Framework.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bin\Debug\net6.0\Inventory.Domin.dll
@@ -21,3 +20,4 @@ D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\ob
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\ref\inventory.InfrastructureCore.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.pdb
+D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\refint\inventory.InfrastructureCore.dll

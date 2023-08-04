@@ -118,6 +118,12 @@ namespace Invetory01.Infrastructure.Migrations
                     b.Property<long>("statuse")
                         .HasColumnType("bigint");
 
+                    b.Property<long>("subcategoriesref")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("subcategory")
+                        .HasColumnType("bigint");
+
                     b.Property<long>("unitref")
                         .HasColumnType("bigint");
 
@@ -160,6 +166,23 @@ namespace Invetory01.Infrastructure.Migrations
                     b.HasIndex("CategoryRef");
 
                     b.ToTable("SubCategories", (string)null);
+                });
+
+            modelBuilder.Entity("Inventory.Domin.Units.Unit", b =>
+                {
+                    b.Property<long>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("ID"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("unit");
                 });
 
             modelBuilder.Entity("Inventory.Domin.Product.ProductsAgg", b =>

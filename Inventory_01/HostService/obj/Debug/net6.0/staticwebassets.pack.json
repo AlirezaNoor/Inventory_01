@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\HostService.bundle.scp.css"
     },
     {
+      "Id": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\GeneratedBarcode\\barcode.png",
+      "PackagePath": "staticwebassets\\GeneratedBarcode\\barcode.png"
+    },
+    {
       "Id": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\11sdsdsdswewee.jpg",
       "PackagePath": "staticwebassets\\Img\\Brand\\11sdsdsdswewee.jpg"
     },

@@ -6,5 +6,7 @@
         void create(createPorducts entity);
         Productsedited getdtilsoforedites(long id);
         void SaveEditedchaanges(Productsedited entity);
+        productlistview getdtails(long id);
+
     }
 }

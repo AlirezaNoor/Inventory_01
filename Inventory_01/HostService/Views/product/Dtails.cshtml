@@ -1,0 +1,100 @@
+﻿ @model InventoryApplicationContract.ProductContartct.productlistview
+
+ <div class="page-wrapper">
+     <div class="content">
+
+
+         <div class="row">
+             <div class="col-lg-8 col-sm-12">
+                 <div class="card">
+                     <div class="card-body">
+                         <div class="bar-code-view">
+                             <a class="printimg">
+                                <img src="@ViewBag.QrCodeUri" class="img-thumbnail" alt="print">
+                             </a>
+                         </div>
+                         <div class="productdetails">
+                             <ul class="product-bar">
+                                 <li>
+                                     <h4>نام کالا</h4>
+                                     <h6>@Model.name	</h6>
+                                 </li>
+                                 <li>
+                                     <h4>دسته بندی</h4>
+                                     <h6>@Model.cateoryref</h6>
+                                 </li>
+                                 <li>
+                                     <h4>زیر دسته بندی </h4>
+                                     <h6>@Model.subcateoryref</h6>
+                                 </li>
+                                 <li>
+                                     <h4>برند</h4>
+                                     <h6>@Model.baand</h6>
+                                 </li>
+                                 <li>
+                                     <h4>واحد سنجش</h4>
+                                     <h6>@Model.unit</h6>
+                                 </li>
+                                 <li>
+                                     <h4>کد سریالی</h4>
+                                     <h6>@Model.sku</h6>
+                                 </li>
+                                 <li>
+                                     <h4>نقطه سفارش گذاری</h4>
+                                     <h6>@Model.minmuimQty</h6>
+                                 </li>
+                                 <li>
+                                     <h4>تعداد</h4>
+                                     <h6>@Model.Qty</h6>
+                                 </li>
+                                 <li>
+                                     <h4>مالیات</h4>
+                                     <h6>@Model.Tax%</h6>
+                                 </li>
+                                 <li>
+                                     <h4>تخفیف</h4>
+                                     <h6>@Model.Discuont</h6>
+                                 </li>
+                                 <li>
+                                     <h4>مبلغ</h4>
+                                     <h6>@Model.price</h6>
+                                 </li>
+                                 <li>
+                                     <h4>وضعیت</h4>
+                                     @if (@Model.statuse == 0)
+                                     {
+                                         <h6>ناموجود</h6>
+                                     }
+                                     else
+                                     {
+                                         <h6>موجود</h6>
+                                     }
+                                 </li>
+ 
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+@*             <div class="col-lg-4 col-sm-12">
+                 <div class="card">
+                     <div class="card-body">
+                         <div class="">
+                             <div class="owl-carousel owl-theme product-slide">
+                                <div class="">
+                                     <img src="~/assets/img/product/product69.jpg" alt="img">
+                                     <h4>macbookpro.jpg</h4>
+                                     <h6>581kb</h6>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>*@
+
+     </div>
+ </div>
+ @*             <div class="form-group">
+        <img src="@ViewBag.QrCodeUri" class="img-thumbnail" />
+      </div>*@

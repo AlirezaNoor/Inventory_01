@@ -1,2 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" />
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)ironsoftware.native.pdfmodel\2023.8.17287\buildTransitive\netstandard2.0\IronSoftware.Native.PdfModel.targets" Condition="Exists('$(NuGetPackageRoot)ironsoftware.native.pdfmodel\2023.8.17287\buildTransitive\netstandard2.0\IronSoftware.Native.PdfModel.targets')" />
+  </ImportGroup>
+</Project>

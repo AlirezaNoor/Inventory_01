@@ -11,9 +11,9 @@
         public decimal price { get; set; }
         public string unit { get; set; }
         public decimal Qty { get; private set; }
-        public decimal minmuimQty { get; private set; }
-        public long Tax { get; private set; }
-        public long Discuont { get; private set; }
-        public long statuse { get; private set; }
+        public decimal minmuimQty { get;  set; }
+        public long Tax { get;  set; }
+        public long Discuont { get;  set; }
+        public long statuse { get;  set; }
     }
 }

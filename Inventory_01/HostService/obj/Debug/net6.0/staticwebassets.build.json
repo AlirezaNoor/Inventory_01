@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SO6rXWPpLd6/M2qAee9XU1IlBJEXCs7Hgw8CgHviqYg=",
+  "Hash": "zG2c7C8v1GO8QAy2HwW8Czi23J7i+0g8qo/G2qFIYZQ=",
   "Source": "HostService",
   "BasePath": "_content/HostService",
   "Mode": "Default",
@@ -8855,6 +8855,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\GeneratedBarcode\\barcode.png",
+      "SourceId": "HostService",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\",
+      "BasePath": "_content/HostService",
+      "RelativePath": "GeneratedBarcode/barcode.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\GeneratedBarcode\\barcode.png"
     },
     {
       "Identity": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\11sdsdsdswewee.jpg",

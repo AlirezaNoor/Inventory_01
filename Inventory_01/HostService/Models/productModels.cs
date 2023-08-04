@@ -10,6 +10,8 @@ namespace HostService.Models
     public class productModels
     {
         public  createPorducts  CreatePorducts { get; set; }
+        public  Productsedited  dtailsPorducts { get; set; }
+        public  productlistview  products { get; set; }
         public SelectList product_list { get; set; }
         public SelectList Unit_list { get; set; }
         public SelectList brnd_view_model { get; set; }

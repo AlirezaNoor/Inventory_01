@@ -87,5 +87,26 @@ namespace InventoryApplication.Produts_Appliaction
                 entity.Qty, entity.minmuimQty, entity.Tax, entity.Discuont, entity.price, entity.statuse, entity.subcategoriesref);
             _reposetory.Save();
         }
+
+        public productlistview getdtails(long id)
+        {
+            var x = _reposetory.GetById(id);
+
+            return new productlistview()
+            {
+                baand = _brand.showAll().FirstOrDefault(z => z.Id == x.brand).name,
+                name = x.ProductName,
+                Id = x.Id,
+                cateoryref = _categoresApplictaion.showAll().FirstOrDefault(z => z.Id == x.categoriesref).CategoryName,
+                price = x.price,
+                sku = x.Sku,
+                unit = _unit.getAllUnit().FirstOrDefault(z => z.id == x.unitref).name,
+                subcateoryref = _subcategoresApplictaion.showAll().FirstOrDefault(z => z.Id == x.subcategoriesref).Name,
+                Tax = x.Tax,
+                Discuont = x.Discuont,
+                statuse = x.statuse,
+                minmuimQty = x.minmuimQty
+            };
+        }
     }
 }

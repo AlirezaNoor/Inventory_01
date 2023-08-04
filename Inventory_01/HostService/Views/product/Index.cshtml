@@ -127,19 +127,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="productimgname">
-                                    <a href="javascript:void(0);" class="product-img">
-                                        <img src="assets/img/product/product1.jpg" alt="product">
-                                    </a>
-                                    <a href="javascript:void(0);">@item.name</a>
-                                </td>
+
                                 <td>@item.sku</td>
                                 <td>@item.cateoryref</td>
                                 <td>@item.baand</td>
                                 <td>@item.price</td>
                                 <td>@item.unit</td>
                                 <td>
-                                    <a class="me-3" href="product-details.html">
+                                    <a class="me-3" href="@Url.Action("Dtails","Product",new{id=item.Id})">
                                         <img src="assets/img/icons/eye.svg" alt="img">
                                     </a>
                                     <a class="me-3" href="editproduct.html">

@@ -52,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZHVjdFxhZGRwcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/aspinventoryproject/Inventory_01/Inventory_01/HostService/Views/product/Dtails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZHVjdFxEdGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/aspinventoryproject/Inventory_01/Inventory_01/HostService/Views/product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

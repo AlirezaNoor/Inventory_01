@@ -101,52 +101,43 @@
                 <div class="table-responsive">
                     <table class="table  datanew">
                         <thead>
-                        <tr>
-                            <th>
-                                <label class="checkboxs">
-                                    <input type="checkbox" id="select-all">
-                                    <span class="checkmarks"></span>
-                                </label>
-                            </th>
-                            <th>نام کالا</th>
-                            <th>SKU </th>
-                            <th>دسته بندی</th>
-                            <th>برند</th>
-                            <th>قمیت</th>
-                            <th>واحد سنجش</th>
-                            <th>عملیات</th>
-                        </tr>
+                            <tr>
+
+                                <th>نام کالا</th>
+                                <th>SKU </th>
+                                <th>دسته بندی</th>
+                                <th>برند</th>
+                                <th>قمیت</th>
+                                <th>واحد سنجش</th>
+                                <th>عملیات</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
 
-                                <td>@item.sku</td>
-                                <td>@item.cateoryref</td>
-                                <td>@item.baand</td>
-                                <td>@item.price</td>
-                                <td>@item.unit</td>
-                                <td>
-                                    <a class="me-3" href="@Url.Action("Dtails","Product",new{id=item.Id})">
-                                        <img src="assets/img/icons/eye.svg" alt="img">
-                                    </a>
-                                    <a class="me-3" href="editproduct.html">
-                                        <img src="assets/img/icons/edit.svg" alt="img">
-                                    </a>
-                                    <a class="confirm-text" href="javascript:void(0);">
-                                        <img src="assets/img/icons/delete.svg" alt="img">
-                                    </a>
-                                </td>
-                            </tr>
 
-                        }
+                                    <td>@item.name</td>
+                                    <td>@item.sku</td>
+                                    <td>@item.cateoryref</td>
+                                    <td>@item.baand</td>
+                                    <td>@item.price</td>
+                                    <td>@item.unit</td>
+                                    <td>
+                                        <a class="me-3" href="@Url.Action("Dtails","Product",new{id=item.Id})">
+                                            <img src="assets/img/icons/eye.svg" alt="img">
+                                        </a>
+                                        <a class="me-3" href="@Url.Action("Edited","Product",new{id=item.Id})">
+                                            <img src="assets/img/icons/edit.svg" alt="img">
+                                        </a>
+                                        <a class="confirm-text" href="javascript:void(0);">
+                                            <img src="assets/img/icons/delete.svg" alt="img">
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            }
                         </tbody>
                     </table>
                 </div>
@@ -156,24 +147,24 @@
     </div>
 </div>
 
-                                    
+
 @section Scripts
-{
+    {
 
     <script type="text/javascript">
 
-    function openseccessmodal(strMassege){
-    var mydiv=document.getElementById("MyModelSuccessAlertbody")  ;
-    mydiv.innerHTML=strMassege;
-    $('#MyModalSeccuse').modal('show');
+        function openseccessmodal(strMassege) {
+            var mydiv = document.getElementById("MyModelSuccessAlertbody");
+            mydiv.innerHTML = strMassege;
+            $('#MyModalSeccuse').modal('show');
 
-    }
-    $(document).ready(function(){
-    var msg="@TempData["successMassege"]";
-    if(msg)
-        openseccessmodal(msg);
+        }
+        $(document).ready(function () {
+            var msg = "@TempData["successMassege"]";
+            if (msg)
+                openseccessmodal(msg);
 
 
-    });
-</script>
+        });
+    </script>
 }

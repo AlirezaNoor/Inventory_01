@@ -59,5 +59,15 @@ namespace InventoryApplication.BrandApplication
             _reposetory.Delete(id);
             _reposetory.Save();
         }
+
+        public BrandViewModel selected(long id)
+        {
+            var x = _reposetory.GetById(id);
+            return new BrandViewModel()
+            {
+                Id = x.Id,
+                name = x.name
+            };
+        }
     }
 }

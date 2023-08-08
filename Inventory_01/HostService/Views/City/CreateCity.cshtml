@@ -1,0 +1,48 @@
+﻿
+@model InventoryApplicationContract.Cities.CreateCity
+<div class="page-wrapper">
+    <div class="content">
+        <div class="page-header">
+            <div class="page-title">
+                <h4>مذیریت شهری</h4>
+                <h6>فزودن مدیریت شهری</h6>
+            </div>
+        </div>
+        <form method="post">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>نام شهر</label>
+                                <input type="text" asp-for="Name">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>کشور</label>
+                                <select asp-items="Model.cotries" asp-for="Countryref">
+                                    <option>Choose city</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>توضیحات</label>
+                                <textarea class="form-control" asp-for="Description"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <input class="btn btn-submit me-2" type="submit" placeholder="submit">
+                            <a href="statelist.html" class="btn btn-cancel">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+
+    </div>
+</div>

@@ -9,6 +9,7 @@ namespace Inventory.Domin.Units
 {
   public interface IUnitReposetory:IGenericReposetores<Unit,long>
     {
+        
 
     }
 }

@@ -68,5 +68,15 @@ namespace InventoryApplication.SubCategory
             _subcategory.Delete(id);
             _subcategory.Save();
         }
+
+        public SubCategoryViewModel selected(long id)
+        {
+            var x= _subcategory.GetById(id);
+            return new SubCategoryViewModel()
+            {
+                Id = x.Id,
+                Name = x.Name
+            };
+        }
     }
 }

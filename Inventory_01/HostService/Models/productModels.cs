@@ -17,6 +17,7 @@ namespace HostService.Models
         public SelectList brnd_view_model { get; set; }
         public SelectList Category_view_model { get; set; }
         public SelectList subCategory_view_model { get; set; }
+        public Productsedited etited { get; set; }
     }
 }
  

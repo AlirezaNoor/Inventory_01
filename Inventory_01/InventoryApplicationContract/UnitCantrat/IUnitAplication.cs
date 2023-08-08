@@ -9,5 +9,6 @@ namespace InventoryApplicationContract.UnitCantrat
     public interface IUnitAplication
     {
         List<UnitList> getAllUnit();
+        UnitList selected(long id);
     }
 }

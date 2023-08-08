@@ -33,6 +33,14 @@
       "PackagePath": "staticwebassets\\Img\\Brand\\sdsdsdswewee.jpg"
     },
     {
+      "Id": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\برند ما.jpg",
+      "PackagePath": "staticwebassets\\Img\\Brand\\برند ما.jpg"
+    },
+    {
+      "Id": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\Img\\Brand\\سام سونگ.PNG",
+      "PackagePath": "staticwebassets\\Img\\Brand\\سام سونگ.PNG"
+    },
+    {
       "Id": "D:\\aspinventoryproject\\Inventory_01\\Inventory_01\\HostService\\wwwroot\\assets\\Font\\IranianSans.ttf",
       "PackagePath": "staticwebassets\\assets\\Font\\IranianSans.ttf"
     },

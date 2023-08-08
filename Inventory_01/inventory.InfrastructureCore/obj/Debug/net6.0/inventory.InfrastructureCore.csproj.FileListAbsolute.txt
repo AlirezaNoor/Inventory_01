@@ -1,3 +1,8 @@
+D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.csproj.AssemblyReference.cache
+D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.AssemblyInfoInputs.cache
+D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.AssemblyInfo.cs
+D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.csproj.CoreCompileInputs.cache
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bin\Debug\net6.0\inventory.InfrastructureCore.deps.json
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bin\Debug\net6.0\inventory.InfrastructureCore.dll
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bin\Debug\net6.0\inventory.InfrastructureCore.pdb
@@ -11,13 +16,8 @@ D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bi
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bin\Debug\net6.0\Invetory01.Infrastructure.pdb
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bin\Debug\net6.0\Framework.pdb
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\bin\Debug\net6.0\InventoryApplicationContract.pdb
-D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.csproj.AssemblyReference.cache
-D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.GeneratedMSBuildEditorConfig.editorconfig
-D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.AssemblyInfoInputs.cache
-D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.AssemblyInfo.cs
-D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.csproj.CoreCompileInputs.cache
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.csproj.CopyComplete
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.dll
-D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\ref\inventory.InfrastructureCore.dll
-D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.pdb
 D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\refint\inventory.InfrastructureCore.dll
+D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\inventory.InfrastructureCore.pdb
+D:\aspinventoryproject\Inventory_01\Inventory_01\inventory.InfrastructureCore\obj\Debug\net6.0\ref\inventory.InfrastructureCore.dll

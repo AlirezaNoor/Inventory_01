@@ -75,6 +75,30 @@ namespace HostService.Controllers.Products
 
             return View(productdtails);
         }
+
+        public IActionResult Edited(long id)
+        {
+            var x = new productModels();
+            x.etited = _produts.getdtilsoforedites(id);
+            var cateoyid = _categoresApplictaion.caateoryseelected(x.etited.categoriesref);
+            x.Category_view_model = new SelectList(_categoresApplictaion.showAll(),"Id", "CategoryName", cateoyid);
+            var _subcateorys = _subCategory.selected(x.etited.subcategoriesref);
+            x.subCategory_view_model = new SelectList(_subCategory.showAll(), "Id", "Name",_subcateorys);
+            var unit = _aplication.selected(x.etited.unitref);
+            x.Unit_list = new SelectList(_aplication.getAllUnit(), "id", "name",unit);
+            var brannd = _brandaplication.selected(x.etited.brand);
+            x.brnd_view_model = new SelectList(_brandaplication.showAll(), "Id", "name",brannd);
+
+            return View(x);
+        }
+        [HttpPost]
+        public IActionResult Edited(productModels command)
+        {
+            _produts.SaveEditedchaanges(command.etited);
+            TempData["successMassege"] = "عملیات با موفقیت انجام شد";
+
+            return RedirectToAction("Index");
+        }
     }
 
 }

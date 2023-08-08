@@ -75,6 +75,107 @@ namespace Invetory01.Infrastructure.Migrations
                     b.ToTable("Categores", (string)null);
                 });
 
+            modelBuilder.Entity("Inventory.Domin.Cities.City", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("Countryref")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Countryref");
+
+                    b.ToTable("City", (string)null);
+                });
+
+            modelBuilder.Entity("Inventory.Domin.Costumer.Costmers", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("Cityref")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("Countryref")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("CustomerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Desciption")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Countryref");
+
+                    b.ToTable("Costumer", (string)null);
+                });
+
+            modelBuilder.Entity("Inventory.Domin.Country.Countreis", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("CountryName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RegionRegion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Counnty", (string)null);
+                });
+
             modelBuilder.Entity("Inventory.Domin.Product.ProductsAgg", b =>
                 {
                     b.Property<long>("Id")
@@ -119,9 +220,6 @@ namespace Invetory01.Infrastructure.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<long>("subcategoriesref")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("subcategory")
                         .HasColumnType("bigint");
 
                     b.Property<long>("unitref")
@@ -185,6 +283,28 @@ namespace Invetory01.Infrastructure.Migrations
                     b.ToTable("unit");
                 });
 
+            modelBuilder.Entity("Inventory.Domin.Cities.City", b =>
+                {
+                    b.HasOne("Inventory.Domin.Country.Countreis", "Countreis")
+                        .WithMany("Cities")
+                        .HasForeignKey("Countryref")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Countreis");
+                });
+
+            modelBuilder.Entity("Inventory.Domin.Costumer.Costmers", b =>
+                {
+                    b.HasOne("Inventory.Domin.Country.Countreis", "Countreis")
+                        .WithMany("Costmers")
+                        .HasForeignKey("Countryref")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Countreis");
+                });
+
             modelBuilder.Entity("Inventory.Domin.Product.ProductsAgg", b =>
                 {
                     b.HasOne("Inventory.Domin.Brand.BrandAgg", "Brand")
@@ -225,6 +345,13 @@ namespace Invetory01.Infrastructure.Migrations
                     b.Navigation("Products");
 
                     b.Navigation("SubCategories");
+                });
+
+            modelBuilder.Entity("Inventory.Domin.Country.Countreis", b =>
+                {
+                    b.Navigation("Cities");
+
+                    b.Navigation("Costmers");
                 });
 #pragma warning restore 612, 618
         }

@@ -76,5 +76,16 @@ namespace InventoryApplication.Categores
                 CategoryName = x.CategoryName
             }).ToList();
         }
+
+        public viewModel caateoryseelected(long id)
+        {
+            var x= _reposetoory.GetById(id);
+
+            return new viewModel()
+            {
+                Id = x.Id,
+                CategoryName = x.CategoryName,
+            };
+        }
     }
 }

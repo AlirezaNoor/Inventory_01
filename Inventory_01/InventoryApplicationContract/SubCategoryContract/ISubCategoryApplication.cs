@@ -10,5 +10,7 @@
         List<SubCategoryViewModel> showAll();
 
         void deleteSubcategory(long id);
+
+        SubCategoryViewModel selected(long id);
     }
 }

@@ -16,5 +16,6 @@ namespace InventoryApplicationContract.BrandApplicationContract
         List<BrandViewModel> showAll();
 
         void deleteSubcategory(long id);
+        BrandViewModel selected(long id);
     }
 }

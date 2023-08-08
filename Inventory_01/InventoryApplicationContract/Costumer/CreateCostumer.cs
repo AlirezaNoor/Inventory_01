@@ -1,4 +1,5 @@
 ﻿using System.Reflection.Metadata.Ecma335;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace InventoryApplicationContract.Costumer
 {
@@ -11,6 +12,8 @@ namespace InventoryApplicationContract.Costumer
         public long Cityref { get; set; }
         public string Address { get; set; }
         public string Desciption { get; set; }
+        public SelectList countrylist { get; set; }
+        public SelectList cityeslist  { get; set; }
 
     }
 }

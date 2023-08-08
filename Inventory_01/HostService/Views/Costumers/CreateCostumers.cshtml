@@ -1,0 +1,75 @@
+﻿@model InventoryApplicationContract.Costumer.CreateCostumer
+<div class="page-wrapper">
+    <div class="content">
+        <div class="page-header">
+            <div class="page-title">
+                <h4>مدیریت مشتری</h4>
+                <h6>افزودن مشتری</h6>
+            </div>
+        </div>
+
+        <form method="post">
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>نام مشتری</label>
+                                <input type="text" asp-for="CustomerName">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>ایمیل</label>
+                                <input type="email" asp-for="Email">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>تلفن</label>
+                                <input type="text" asp-for="Phone">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label> کشور را رانتخاب کنید</label>
+                                <select asp-items="@Model.countrylist" asp-for="Countryref">
+                                    <option>Choose Country</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>شهر </label>
+                                <select asp-items="Model.cityeslist" asp-for="Cityref">
+                                    <option>Choose City</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-12">
+                            <div class="form-group">
+                                <label>آدرس</label>
+                                <input type="text" asp-for="Address">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>توضیحات</label>
+                                <textarea class="form-control" asp-for="Desciption"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="submit" class="btn btn-submit me-2" placeholder="submit">
+                            <a href="javascript:void(0);" class="btn btn-cancel">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>

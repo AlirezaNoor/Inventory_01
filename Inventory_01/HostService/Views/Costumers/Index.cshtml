@@ -76,12 +76,6 @@
 <table class="table  datanew">
 <thead>
 <tr>
-    <th>
-        <label class="checkboxs">
-            <input type="checkbox" id="select-all">
-            <span class="checkmarks"></span>
-        </label>
-    </th>
     <th>نام مشتری</th>
     <th>کد مشتری</th>
      <th>شماره تماس</th>
@@ -122,3 +116,24 @@
 
 </div>
 </div>
+@section Scripts
+{
+
+    <script type="text/javascript">
+
+        function openseccessmodal(strMassege) {
+            var mydiv = document.getElementById("MyModelSuccessAlertbody");
+            mydiv.innerHTML = strMassege;
+            $('#MyModalSeccuse').modal('show');
+
+        }
+        $(document).ready(function () {
+            var msg = "@TempData["successMassege"]";
+            if (msg)
+                openseccessmodal(msg);
+
+
+        });
+    </script>
+
+}

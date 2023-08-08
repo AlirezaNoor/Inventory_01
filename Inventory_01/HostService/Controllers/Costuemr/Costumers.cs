@@ -2,6 +2,7 @@
 using InventoryApplicationContract.Costumer;
 using InventoryApplicationContract.Countries;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HostService.Controllers.Costuemr
 {
@@ -23,6 +24,24 @@ namespace HostService.Controllers.Costuemr
    
       
             return View(_costumer.getall());
+        }
+
+        public IActionResult CreateCostumers()
+        {
+            CreateCostumer createCostumer = new();
+            createCostumer.countrylist = new SelectList(_countries.getcountries(), "Id", "CountryName");
+            createCostumer.cityeslist = new SelectList(_cities.getall(), "id", "Name");
+            return View(createCostumer);
+        }
+
+        [HttpPost]
+        public IActionResult CreateCostumers(CreateCostumer command)
+        {
+            CreateCostumer createCostumer = new();
+            _costumer.create(command);
+            TempData["successMassege"] = "عملیات با موفقیت انجام شد";
+
+            return RedirectToAction("Index");
         }
     }
 }

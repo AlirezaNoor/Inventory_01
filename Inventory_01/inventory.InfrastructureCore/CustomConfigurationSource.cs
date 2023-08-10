@@ -5,6 +5,7 @@ using Inventory.Domin.Costumer;
 using Inventory.Domin.Country;
 using Inventory.Domin.Product;
 using Inventory.Domin.SubCategory;
+using Inventory.Domin.Supliers;
 using Inventory.Domin.Units;
 using InventoryApplication.BrandApplication;
 using InventoryApplication.Categores;
@@ -13,6 +14,7 @@ using InventoryApplication.Costumer;
 using InventoryApplication.CountryApplication;
 using InventoryApplication.Produts_Appliaction;
 using InventoryApplication.SubCategory;
+using InventoryApplication.SupplierApp;
 using InventoryApplication.Unit;
 using InventoryApplicationContract.BrandApplicationContract;
 using InventoryApplicationContract.Categores;
@@ -21,6 +23,7 @@ using InventoryApplicationContract.Costumer;
 using InventoryApplicationContract.Countries;
 using InventoryApplicationContract.ProductContartct;
 using InventoryApplicationContract.SubCategoryContract;
+using InventoryApplicationContract.Supplier;
 using InventoryApplicationContract.UnitCantrat;
 using Invetory01.Infrastructure.Reposetory;
 using Microsoft.Extensions.DependencyInjection;
@@ -48,6 +51,8 @@ namespace inventory.InfrastructureCore
             builder.AddTransient<ICitiesReposetory, CitiesRepostory>();
             builder.AddTransient<ICostumerReposetory, CostumerReposetory>();
             builder.AddTransient<ICostumerAppliation, CostumerAppliation>();
+            builder.AddTransient<ISupplierReposetory, SupplierReposetory>();
+            builder.AddTransient<ISupplierApplicaation, SupplierApplication>();
         }
 
 

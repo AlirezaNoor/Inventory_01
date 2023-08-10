@@ -52,12 +52,23 @@ namespace InventoryApplication.SupplierApp
 
         public void saveeditchanges(Editedsupplier e)
         {
-            var sup=_
+            var sup = _supplier.GetById(e.Id);
+            sup.EditedSupplierr(e.SupplierName, e.Email, e.counteryref, e.Cityref, e.phone,
+                e.Addresss, e.Description);
+            _supplier.Save();
         }
 
         public List<supplierViewModel> getall()
         {
-            throw new NotImplementedException();
+            return _supplier.GetAll().Select(x => new supplierViewModel()
+            {
+                Email = x.Email,
+                Id = x.Id,
+                phone = x.phone,
+                SupplierName = x.SupplierName,
+                counteryref = _countries.GetById(x.counteryref).CountryName,
+            }).ToList();
+
         }
     }
 }

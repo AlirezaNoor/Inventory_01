@@ -5,6 +5,8 @@ using Inventory.Domin.Costumer;
 using Inventory.Domin.Country;
 using Inventory.Domin.Product;
 using Inventory.Domin.SubCategory;
+using Inventory.Domin.Suplier;
+using Inventory.Domin.Supliers;
 using Inventory.Domin.Units;
 using Invetory01.Infrastructure.Mapping;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +27,7 @@ namespace Invetory01.Infrastructure.Db_Context
         public DbSet<Unit> unit { get; set; }
         public DbSet<City> city { get; set; }
         public DbSet<Costmers> costumer { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -36,6 +39,7 @@ namespace Invetory01.Infrastructure.Db_Context
             modelBuilder.ApplyConfiguration(new CountriesMapping());
             modelBuilder.ApplyConfiguration(new CityMapping());
             modelBuilder.ApplyConfiguration(new CostumerMapping());
+            modelBuilder.ApplyConfiguration(new SupplierMapping());
 
         }
     }

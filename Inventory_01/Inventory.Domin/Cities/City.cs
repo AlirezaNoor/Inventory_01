@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Framework;
 using Inventory.Domin.Costumer;
 using Inventory.Domin.Country;
+using Inventory.Domin.Supliers;
 
 namespace Inventory.Domin.Cities
 {
@@ -15,7 +16,6 @@ namespace Inventory.Domin.Cities
         public long Countryref { get; private set; }
         public string Description { get; private set; }
         public Countreis Countreis { get; set; }
-
         public City(string name, long countryref, string description)
         {
             Name = name;

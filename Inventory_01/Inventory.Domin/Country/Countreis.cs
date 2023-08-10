@@ -1,6 +1,7 @@
 ﻿using Framework;
 using Inventory.Domin.Cities;
 using Inventory.Domin.Costumer;
+using Inventory.Domin.Supliers;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Inventory.Domin.Country
@@ -13,6 +14,7 @@ namespace Inventory.Domin.Country
 
         public List<City> Cities { get; set; }
         public List<Costmers> Costmers { get; set; }
+
         //CountryName
         //Region
         //    Description

@@ -1,0 +1,39 @@
+﻿@model InventoryApplicationContract.StoreCotracct.CreateStore
+<div class="page-wrapper">
+    <div class="content">
+        <div class="page-header">
+            <div class="page-title">
+                <h4>افزودن انبار</h4>
+            </div>
+        </div>
+        <form method="post">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>افزودن اانبار</label>
+                                <input type="text" asp-for="StoreName">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>کد انیار</label>
+                                <input type="text" asp-for="StoreCode">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <input type="submit" placeholder="submit" class="btn btn-submit me-2">
+                            <a href="storelist.html" class="btn btn-cancel">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+
+
+    </div>
+</div>

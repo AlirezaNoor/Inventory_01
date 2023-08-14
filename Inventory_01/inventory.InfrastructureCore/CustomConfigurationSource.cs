@@ -1,27 +1,36 @@
-﻿using Inventory.Domin.Brand;
+﻿using Inventory.Domin.AddProductsToStore;
+using Inventory.Domin.Brand;
 using Inventory.Domin.CategoryAgg;
 using Inventory.Domin.Cities;
 using Inventory.Domin.Costumer;
 using Inventory.Domin.Country;
+using Inventory.Domin.FiscalYaers;
 using Inventory.Domin.Product;
+using Inventory.Domin.Stores;
 using Inventory.Domin.SubCategory;
 using Inventory.Domin.Supliers;
 using Inventory.Domin.Units;
+using InventoryApplication.AddproductToStore;
 using InventoryApplication.BrandApplication;
 using InventoryApplication.Categores;
 using InventoryApplication.Cities;
 using InventoryApplication.Costumer;
 using InventoryApplication.CountryApplication;
+using InventoryApplication.FiscalYearApp;
 using InventoryApplication.Produts_Appliaction;
+using InventoryApplication.StoreApp;
 using InventoryApplication.SubCategory;
 using InventoryApplication.SupplierApp;
 using InventoryApplication.Unit;
+using InventoryApplicationContract.Addedproductstostore;
 using InventoryApplicationContract.BrandApplicationContract;
 using InventoryApplicationContract.Categores;
 using InventoryApplicationContract.Cities;
 using InventoryApplicationContract.Costumer;
 using InventoryApplicationContract.Countries;
+using InventoryApplicationContract.FiscalyearApp_Contract;
 using InventoryApplicationContract.ProductContartct;
+using InventoryApplicationContract.StoreCotracct;
 using InventoryApplicationContract.SubCategoryContract;
 using InventoryApplicationContract.Supplier;
 using InventoryApplicationContract.UnitCantrat;
@@ -53,6 +62,12 @@ namespace inventory.InfrastructureCore
             builder.AddTransient<ICostumerAppliation, CostumerAppliation>();
             builder.AddTransient<ISupplierReposetory, SupplierReposetory>();
             builder.AddTransient<ISupplierApplicaation, SupplierApplication>();
+            builder.AddTransient<IFiscalyearReposetory, FiscalyearReposetory>();
+            builder.AddTransient<IFiscalYearApplication, FiscalYearApplication>();
+            builder.AddTransient<IStoreReposetory, StoreReposetory>();
+            builder.AddTransient<IStoreApplication, StoreApplication>();
+            builder.AddTransient<IAddProductToStoreReposetory, AddProductToStoreReposetory>();
+            builder.AddTransient<IAddProductToStoreApp, AddProductToStoreApp>();
         }
 
 

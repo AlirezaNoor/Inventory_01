@@ -22,6 +22,32 @@ namespace Invetory01.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Inventory.Domin.AddProductsToStore.AddProductTostore", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("productRef")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("storeRef")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("productRef");
+
+                    b.HasIndex("storeRef");
+
+                    b.ToTable("AddProductsToStore", (string)null);
+                });
+
             modelBuilder.Entity("Inventory.Domin.Brand.BrandAgg", b =>
                 {
                     b.Property<long>("Id")
@@ -176,6 +202,36 @@ namespace Invetory01.Infrastructure.Migrations
                     b.ToTable("Counnty", (string)null);
                 });
 
+            modelBuilder.Entity("Inventory.Domin.FiscalYaers.FiscalYaer", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("SDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("desccription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("eDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Fiscalyear", (string)null);
+                });
+
             modelBuilder.Entity("Inventory.Domin.Product.ProductsAgg", b =>
                 {
                     b.Property<long>("Id")
@@ -232,6 +288,29 @@ namespace Invetory01.Infrastructure.Migrations
                     b.HasIndex("categoriesref");
 
                     b.ToTable("Products", (string)null);
+                });
+
+            modelBuilder.Entity("Inventory.Domin.Stores.StoreAgg", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("StoreCode")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("StoreName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("store", (string)null);
                 });
 
             modelBuilder.Entity("Inventory.Domin.SubCategory.SubCategories", b =>
@@ -325,6 +404,25 @@ namespace Invetory01.Infrastructure.Migrations
                     b.ToTable("unit");
                 });
 
+            modelBuilder.Entity("Inventory.Domin.AddProductsToStore.AddProductTostore", b =>
+                {
+                    b.HasOne("Inventory.Domin.Product.ProductsAgg", "produccts")
+                        .WithMany("AddProductTostores")
+                        .HasForeignKey("productRef")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Inventory.Domin.Stores.StoreAgg", "Store")
+                        .WithMany("AddProductTostores")
+                        .HasForeignKey("storeRef")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Store");
+
+                    b.Navigation("produccts");
+                });
+
             modelBuilder.Entity("Inventory.Domin.Cities.City", b =>
                 {
                     b.HasOne("Inventory.Domin.Country.Countreis", "Countreis")
@@ -394,6 +492,16 @@ namespace Invetory01.Infrastructure.Migrations
                     b.Navigation("Cities");
 
                     b.Navigation("Costmers");
+                });
+
+            modelBuilder.Entity("Inventory.Domin.Product.ProductsAgg", b =>
+                {
+                    b.Navigation("AddProductTostores");
+                });
+
+            modelBuilder.Entity("Inventory.Domin.Stores.StoreAgg", b =>
+                {
+                    b.Navigation("AddProductTostores");
                 });
 #pragma warning restore 612, 618
         }

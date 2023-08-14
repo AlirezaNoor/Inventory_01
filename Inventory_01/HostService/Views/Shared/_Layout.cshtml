@@ -4,11 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - HostService</title>
-    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 
     <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="~/assets/css/bootstrap-datetimepicker.min.css">
+
     <link rel="stylesheet" href="~/assets/css/animate.css">
+
+    <link rel="stylesheet" href="~/assets/plugins/select2/css/select2.min.css">
 
     <link rel="stylesheet" href="~/assets/css/dataTables.bootstrap4.min.css">
 
@@ -222,18 +226,33 @@
                         <li class="active">
                             <a href="index.html"><img src="~/assets/img/icons/dashboard.svg" alt="img"><span> داشبورد</span> </a>
                         </li>
+
+
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><img src="~/assets/img/icons/edit-6.svg" alt="img"><span> عمومی</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a asp-controller="Fiscalyear" asp-action="Index"> لیست سال مالی </a></li>
+                                <li><a asp-controller="Fiscalyear" asp-action="CreateFiscalyear"> ایجادسال مالی</a></li>
+                                <li><a asp-controller="store" asp-action="Index">لیست انبار</a></li>
+                                <li><a asp-controller="store" asp-action="CreateStore">افزودن انبار</a></li>
+                                <li><a asp-controller="ProductsToStore" asp-action="Index">لیست انبار و کالا</a></li>
+                                <li><a asp-controller="ProductsToStore" asp-action="Create">افزودن انبار به کالا</a></li>
+
+                            </ul>
+                        </li>
+
                         <li class="submenu">
                             <a href="javascript:void(0);"><img src="~/assets/img/icons/product.svg" alt="img"><span> محصول</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a  asp-controller="Product" asp-action="Index"  >لیست محصولات</a></li>
+                                <li><a asp-controller="Product" asp-action="Index">لیست محصولات</a></li>
                                 <li><a href="addproduct.html">افزودن کالا</a></li>
-                                <li><a  asp-controller="Categores" asp-action="Index">لیست دسته بندی ها</a></li>
-                                <li><a  asp-action="CreateCategories" asp-controller="Categores">افزودن دستبندی</a></li>
-                                <li><a  asp-controller="SubCategory" asp-action="Index">لیست زیر دسته بندی ها</a></li>
+                                <li><a asp-controller="Categores" asp-action="Index">لیست دسته بندی ها</a></li>
+                                <li><a asp-action="CreateCategories" asp-controller="Categores">افزودن دستبندی</a></li>
+                                <li><a asp-controller="SubCategory" asp-action="Index">لیست زیر دسته بندی ها</a></li>
                                 <li><a asp-controller="SubCategory" asp-action="CreateSubCategory">افزودن زیر دسته بندی</a></li>
-                                <li><a  asp-action="Index" asp-controller="Brand">لیست برند ها</a></li>
+                                <li><a asp-action="Index" asp-controller="Brand">لیست برند ها</a></li>
                                 <li><a asp-controller="Brand" asp-action="Create">افزودن برند</a></li>
-                                <li><a  asp-controller="Product" asp-action="addproduct">افزودن کالا</a></li>
+                                <li><a asp-controller="Product" asp-action="addproduct">افزودن کالا</a></li>
                                 <li><a href="barcode.html">پرینت بارکد</a></li>
                             </ul>
                         </li>
@@ -296,17 +315,16 @@
                                 <li><a asp-controller="Suppliers" asp-action="createSupplier">افزودن تامین کننده </a></li>
                                 <li><a href="userlist.html">لیست کاربران</a></li>
                                 <li><a href="adduser.html">افزودن کاربران</a></li>
-                                <li><a href="storelist.html">لیست انبار</a></li>
-                                <li><a href="addstore.html">افزودن انبار</a></li>
+
                             </ul>
                         </li>
                         <li class="submenu">
                             <a href="javascript:void(0);"><img src="~/assets/img/icons/places.svg" alt="img"><span> مکان ها</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a  asp-action="CereatCouuntry" asp-controller="Countries">افزودن کشور جدید</a></li>
-                                <li><a  asp-action="Index" asp-controller="Countries">لیست کشور ها</a></li>
+                                <li><a asp-action="CereatCouuntry" asp-controller="Countries">افزودن کشور جدید</a></li>
+                                <li><a asp-action="Index" asp-controller="Countries">لیست کشور ها</a></li>
                                 <li><a asp-action="CreateCity" asp-controller="City">موقعیت جدید</a></li>
-                                <li><a  asp-action="Index" asp-controller="City">لیست موقعیت ها</a></li>
+                                <li><a asp-action="Index" asp-controller="City">لیست موقعیت ها</a></li>
                             </ul>
                         </li>
 
@@ -331,27 +349,28 @@
             @RenderBody();
         </div>
     </div>
-    
 
 
-<div class="modal fade" id="MyModalSeccuse" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">موضوعات</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
-            </div>
-            <div class="modal-body" id="MyModelSuccessAlertbody">
-                this is my body
+
+    <div class="modal fade" id="MyModalSeccuse" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">موضوعات</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
                 </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+                <div class="modal-body" id="MyModelSuccessAlertbody">
+                    this is my body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+
+    <script src="~/assets/js/jquery-3.6.0.min.js"></script>
 
     <script src="~/assets/js/feather.min.js"></script>
 
@@ -362,9 +381,15 @@
 
     <script src="~/assets/js/bootstrap.bundle.min.js"></script>
 
+    <script src="~/assets/plugins/select2/js/select2.min.js"></script>
+
+    <script src="~/assets/js/moment.min.js"></script>
+    <script src="~/assets/js/bootstrap-datetimepicker.min.js"></script>
+
+    <script src="~/assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+    <script src="~/assets/plugins/sweetalert/sweetalerts.min.js"></script>
     <script src="~/assets/plugins/apexchart/apexcharts.min.js"></script>
     <script src="~/assets/plugins/apexchart/chart-data.js"></script>
-
     <script src="~/assets/js/script.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -21,7 +21,7 @@ namespace HostService.Controllers.Supplier
 
         public IActionResult Index()
         {
-            return View(_supplier.getall());
+            return View(_supplier.getall().ToList());
         }
 
 

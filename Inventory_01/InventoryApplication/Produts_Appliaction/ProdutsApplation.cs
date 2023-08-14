@@ -33,17 +33,17 @@ namespace InventoryApplication.Produts_Appliaction
                 cateoryref = _categoresApplictaion.showAll().FirstOrDefault(z => z.Id == x.categoriesref).CategoryName,
                 price = x.price,
                 sku = x.Sku,
-                unit = _unit.getAllUnit().FirstOrDefault(z=>z.id==x.unitref).name,
-                subcateoryref =_subcategoresApplictaion.showAll().FirstOrDefault(z=>z.Id==x.subcategoriesref).Name,
+                unit = _unit.getAllUnit().FirstOrDefault(z => z.id == x.unitref).name,
+                subcateoryref = _subcategoresApplictaion.showAll().FirstOrDefault(z => z.Id == x.subcategoriesref).Name,
                 Tax = x.Tax,
                 Discuont = x.Discuont,
                 statuse = x.statuse,
-                 minmuimQty = x.minmuimQty
-                
+                minmuimQty = x.minmuimQty
 
 
 
-                
+
+
 
             }).ToList();
 
@@ -107,6 +107,21 @@ namespace InventoryApplication.Produts_Appliaction
                 statuse = x.statuse,
                 minmuimQty = x.minmuimQty
             };
+        }
+
+        public List<productlistview> selectdtaiils()
+        {
+            return _reposetory.GetAll().Select(x => new productlistview()
+            {
+                name = x.ProductName,
+                Id = x.Id,
+
+
+
+
+
+
+            }).ToList();
         }
     }
 }

@@ -30,4 +30,12 @@
     <Folder Include="wwwroot\Img\Brand\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\ProductsToStore\Create.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\ProductsToStore\Create.cshtml" />
+  </ItemGroup>
+
 </Project>

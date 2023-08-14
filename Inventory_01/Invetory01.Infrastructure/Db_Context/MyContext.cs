@@ -1,9 +1,12 @@
-﻿using Inventory.Domin.Brand;
+﻿using Inventory.Domin.AddProductsToStore;
+using Inventory.Domin.Brand;
 using Inventory.Domin.CategoryAgg;
 using Inventory.Domin.Cities;
 using Inventory.Domin.Costumer;
 using Inventory.Domin.Country;
+using Inventory.Domin.FiscalYaers;
 using Inventory.Domin.Product;
+using Inventory.Domin.Stores;
 using Inventory.Domin.SubCategory;
 using Inventory.Domin.Suplier;
 using Inventory.Domin.Supliers;
@@ -28,6 +31,9 @@ namespace Invetory01.Infrastructure.Db_Context
         public DbSet<City> city { get; set; }
         public DbSet<Costmers> costumer { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<FiscalYaer> FiscalYaer { get; set; }
+        public DbSet<StoreAgg> store{ get; set; }
+        public DbSet<AddProductTostore> AddProductTostores{ get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -40,6 +46,9 @@ namespace Invetory01.Infrastructure.Db_Context
             modelBuilder.ApplyConfiguration(new CityMapping());
             modelBuilder.ApplyConfiguration(new CostumerMapping());
             modelBuilder.ApplyConfiguration(new SupplierMapping());
+            modelBuilder.ApplyConfiguration(new FiscalyearMapping());
+            modelBuilder.ApplyConfiguration(new StoreMapping());
+            modelBuilder.ApplyConfiguration(new AddproducttostoreMapping());
 
         }
     }

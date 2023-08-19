@@ -5,6 +5,8 @@ using Inventory.Domin.Cities;
 using Inventory.Domin.Costumer;
 using Inventory.Domin.Country;
 using Inventory.Domin.FiscalYaers;
+using Inventory.Domin.InventoryVoucher;
+using Inventory.Domin.InventoryVoucherItem;
 using Inventory.Domin.Product;
 using Inventory.Domin.Stores;
 using Inventory.Domin.SubCategory;
@@ -34,6 +36,8 @@ namespace Invetory01.Infrastructure.Db_Context
         public DbSet<FiscalYaer> FiscalYaer { get; set; }
         public DbSet<StoreAgg> store{ get; set; }
         public DbSet<AddProductTostore> AddProductTostores{ get; set; }
+        public DbSet<InventoryVoucher_Shopping> InventoryVoucher{ get; set; }
+        public DbSet<InventoryVoucheritemShopping> InventoryVoucheritem{ get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -49,6 +53,8 @@ namespace Invetory01.Infrastructure.Db_Context
             modelBuilder.ApplyConfiguration(new FiscalyearMapping());
             modelBuilder.ApplyConfiguration(new StoreMapping());
             modelBuilder.ApplyConfiguration(new AddproducttostoreMapping());
+            modelBuilder.ApplyConfiguration(new InventoryVoucherMapping());
+            modelBuilder.ApplyConfiguration(new InventoryVoucherItemMapping());
 
         }
     }

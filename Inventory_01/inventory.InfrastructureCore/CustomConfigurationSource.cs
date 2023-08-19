@@ -5,6 +5,7 @@ using Inventory.Domin.Cities;
 using Inventory.Domin.Costumer;
 using Inventory.Domin.Country;
 using Inventory.Domin.FiscalYaers;
+using Inventory.Domin.InventoryVoucher;
 using Inventory.Domin.Product;
 using Inventory.Domin.Stores;
 using Inventory.Domin.SubCategory;
@@ -17,6 +18,8 @@ using InventoryApplication.Cities;
 using InventoryApplication.Costumer;
 using InventoryApplication.CountryApplication;
 using InventoryApplication.FiscalYearApp;
+using InventoryApplication.inventoryVoucher;
+using InventoryApplication.InventoryVoucherItemapp;
 using InventoryApplication.Produts_Appliaction;
 using InventoryApplication.StoreApp;
 using InventoryApplication.SubCategory;
@@ -29,6 +32,7 @@ using InventoryApplicationContract.Cities;
 using InventoryApplicationContract.Costumer;
 using InventoryApplicationContract.Countries;
 using InventoryApplicationContract.FiscalyearApp_Contract;
+using InventoryApplicationContract.InventoryVoucherItem;
 using InventoryApplicationContract.ProductContartct;
 using InventoryApplicationContract.StoreCotracct;
 using InventoryApplicationContract.SubCategoryContract;
@@ -68,6 +72,10 @@ namespace inventory.InfrastructureCore
             builder.AddTransient<IStoreApplication, StoreApplication>();
             builder.AddTransient<IAddProductToStoreReposetory, AddProductToStoreReposetory>();
             builder.AddTransient<IAddProductToStoreApp, AddProductToStoreApp>();
+            builder.AddTransient<IInventoryVocherReposetory, InventoryVocherReposetory>();
+            builder.AddTransient<IInventoryVoucherApp, inventoryvoucherApp>();
+            builder.AddTransient<IInventoryVocherItemReposetory, InventoryVocherItemReposetory>();
+            builder.AddTransient<IInventoryVoucherItemApp, InventoryVoucherItemApp>();
         }
 
 

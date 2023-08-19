@@ -232,6 +232,83 @@ namespace Invetory01.Infrastructure.Migrations
                     b.ToTable("Fiscalyear", (string)null);
                 });
 
+            modelBuilder.Entity("Inventory.Domin.InventoryVoucher.InventoryVoucher_Shopping", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("Dates")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("SupplierRef")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("VoucherType")
+                        .HasColumnType("int");
+
+                    b.Property<long>("nummber")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("storeref")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SupplierRef");
+
+                    b.HasIndex("storeref");
+
+                    b.ToTable("InventoryVoucher", (string)null);
+                });
+
+            modelBuilder.Entity("Inventory.Domin.InventoryVoucherItem.InventoryVoucheritemShopping", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("Inventoryoucherref")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("Quntity")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("productsref")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("unitref")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Inventoryoucherref");
+
+                    b.HasIndex("productsref");
+
+                    b.HasIndex("unitref");
+
+                    b.ToTable("inventoryVoucherItem", (string)null);
+                });
+
             modelBuilder.Entity("Inventory.Domin.Product.ProductsAgg", b =>
                 {
                     b.Property<long>("Id")
@@ -445,6 +522,52 @@ namespace Invetory01.Infrastructure.Migrations
                     b.Navigation("Countreis");
                 });
 
+            modelBuilder.Entity("Inventory.Domin.InventoryVoucher.InventoryVoucher_Shopping", b =>
+                {
+                    b.HasOne("Inventory.Domin.Suplier.Supplier", "Supplier")
+                        .WithMany("inventory")
+                        .HasForeignKey("SupplierRef")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Inventory.Domin.Stores.StoreAgg", "Store")
+                        .WithMany("inventory")
+                        .HasForeignKey("storeref")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Store");
+
+                    b.Navigation("Supplier");
+                });
+
+            modelBuilder.Entity("Inventory.Domin.InventoryVoucherItem.InventoryVoucheritemShopping", b =>
+                {
+                    b.HasOne("Inventory.Domin.InventoryVoucher.InventoryVoucher_Shopping", "InventoryVoucherShopping")
+                        .WithMany("InventoryVoucheritem")
+                        .HasForeignKey("Inventoryoucherref")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Inventory.Domin.Product.ProductsAgg", "prdoucts")
+                        .WithMany("InventoryVoucheritem")
+                        .HasForeignKey("productsref")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Inventory.Domin.Units.Unit", "unit")
+                        .WithMany("InventoryVoucheritem")
+                        .HasForeignKey("unitref")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("InventoryVoucherShopping");
+
+                    b.Navigation("prdoucts");
+
+                    b.Navigation("unit");
+                });
+
             modelBuilder.Entity("Inventory.Domin.Product.ProductsAgg", b =>
                 {
                     b.HasOne("Inventory.Domin.Brand.BrandAgg", "Brand")
@@ -494,14 +617,33 @@ namespace Invetory01.Infrastructure.Migrations
                     b.Navigation("Costmers");
                 });
 
+            modelBuilder.Entity("Inventory.Domin.InventoryVoucher.InventoryVoucher_Shopping", b =>
+                {
+                    b.Navigation("InventoryVoucheritem");
+                });
+
             modelBuilder.Entity("Inventory.Domin.Product.ProductsAgg", b =>
                 {
                     b.Navigation("AddProductTostores");
+
+                    b.Navigation("InventoryVoucheritem");
                 });
 
             modelBuilder.Entity("Inventory.Domin.Stores.StoreAgg", b =>
                 {
                     b.Navigation("AddProductTostores");
+
+                    b.Navigation("inventory");
+                });
+
+            modelBuilder.Entity("Inventory.Domin.Suplier.Supplier", b =>
+                {
+                    b.Navigation("inventory");
+                });
+
+            modelBuilder.Entity("Inventory.Domin.Units.Unit", b =>
+                {
+                    b.Navigation("InventoryVoucheritem");
                 });
 #pragma warning restore 612, 618
         }

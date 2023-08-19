@@ -1,6 +1,7 @@
 ﻿using Framework;
 using Inventory.Domin.Cities;
 using Inventory.Domin.Country;
+using Inventory.Domin.InventoryVoucher;
 
 namespace Inventory.Domin.Suplier
 {
@@ -14,6 +15,7 @@ namespace Inventory.Domin.Suplier
 
         public string Addresss { get; private set; }
         public string Description { get; private set; }
+        public List<InventoryVoucher_Shopping> inventory { get; set; }
 
 
         public Supplier(string supplierName, string email, long counteryref, long cityref, string phone, string addresss, string description)

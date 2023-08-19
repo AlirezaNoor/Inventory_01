@@ -2,6 +2,7 @@
 using Inventory.Domin.AddProductsToStore;
 using Inventory.Domin.Brand;
 using Inventory.Domin.CategoryAgg;
+using Inventory.Domin.InventoryVoucherItem;
 using Inventory.Domin.SubCategory;
 
 namespace Inventory.Domin.Product
@@ -23,6 +24,7 @@ namespace Inventory.Domin.Product
         public BrandAgg Brand { get; private set; }
         public long subcategoriesref { get; private set; }
         public List<AddProductTostore> AddProductTostores { get; set; }
+        public List<InventoryVoucheritemShopping> InventoryVoucheritem { get; set; }
 
 
         public ProductsAgg(string productName, long categoriesref, long brand, long unitref, string sku, decimal qty, decimal minmuimQty, long tax, long discuont, decimal price, long statuse, long subcategoriesref)

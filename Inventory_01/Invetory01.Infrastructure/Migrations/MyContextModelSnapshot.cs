@@ -72,6 +72,47 @@ namespace Invetory01.Infrastructure.Migrations
                     b.ToTable("Brands", (string)null);
                 });
 
+            modelBuilder.Entity("Inventory.Domin.Cardex.Cardexes", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("Quantity")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("productsId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("propductsref")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("storeId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("storeref")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("transactiondate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("vorodkhoroj")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("productsId");
+
+                    b.HasIndex("storeId");
+
+                    b.ToTable("cardex");
+                });
+
             modelBuilder.Entity("Inventory.Domin.CategoryAgg.Categores", b =>
                 {
                     b.Property<long>("Id")
@@ -247,6 +288,9 @@ namespace Invetory01.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<long>("Fisicalyearref")
+                        .HasColumnType("bigint");
+
                     b.Property<long>("SupplierRef")
                         .HasColumnType("bigint");
 
@@ -263,6 +307,8 @@ namespace Invetory01.Infrastructure.Migrations
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Fisicalyearref");
 
                     b.HasIndex("SupplierRef");
 
@@ -500,6 +546,25 @@ namespace Invetory01.Infrastructure.Migrations
                     b.Navigation("produccts");
                 });
 
+            modelBuilder.Entity("Inventory.Domin.Cardex.Cardexes", b =>
+                {
+                    b.HasOne("Inventory.Domin.Product.ProductsAgg", "products")
+                        .WithMany("Cardexes")
+                        .HasForeignKey("productsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Inventory.Domin.Stores.StoreAgg", "store")
+                        .WithMany("Cardexes")
+                        .HasForeignKey("storeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("products");
+
+                    b.Navigation("store");
+                });
+
             modelBuilder.Entity("Inventory.Domin.Cities.City", b =>
                 {
                     b.HasOne("Inventory.Domin.Country.Countreis", "Countreis")
@@ -524,6 +589,12 @@ namespace Invetory01.Infrastructure.Migrations
 
             modelBuilder.Entity("Inventory.Domin.InventoryVoucher.InventoryVoucher_Shopping", b =>
                 {
+                    b.HasOne("Inventory.Domin.FiscalYaers.FiscalYaer", "Fiscalyearref")
+                        .WithMany("inventory")
+                        .HasForeignKey("Fisicalyearref")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Inventory.Domin.Suplier.Supplier", "Supplier")
                         .WithMany("inventory")
                         .HasForeignKey("SupplierRef")
@@ -535,6 +606,8 @@ namespace Invetory01.Infrastructure.Migrations
                         .HasForeignKey("storeref")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Fiscalyearref");
 
                     b.Navigation("Store");
 
@@ -617,6 +690,11 @@ namespace Invetory01.Infrastructure.Migrations
                     b.Navigation("Costmers");
                 });
 
+            modelBuilder.Entity("Inventory.Domin.FiscalYaers.FiscalYaer", b =>
+                {
+                    b.Navigation("inventory");
+                });
+
             modelBuilder.Entity("Inventory.Domin.InventoryVoucher.InventoryVoucher_Shopping", b =>
                 {
                     b.Navigation("InventoryVoucheritem");
@@ -626,12 +704,16 @@ namespace Invetory01.Infrastructure.Migrations
                 {
                     b.Navigation("AddProductTostores");
 
+                    b.Navigation("Cardexes");
+
                     b.Navigation("InventoryVoucheritem");
                 });
 
             modelBuilder.Entity("Inventory.Domin.Stores.StoreAgg", b =>
                 {
                     b.Navigation("AddProductTostores");
+
+                    b.Navigation("Cardexes");
 
                     b.Navigation("inventory");
                 });

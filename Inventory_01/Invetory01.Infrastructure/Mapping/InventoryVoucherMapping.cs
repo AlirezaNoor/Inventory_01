@@ -17,6 +17,7 @@ namespace Invetory01.Infrastructure.Mapping
             builder.HasKey(x => x.Id);
             builder.HasOne(x => x.Store).WithMany(x => x.inventory).HasForeignKey(x => x.storeref);
             builder.HasOne(x => x.Supplier).WithMany(x => x.inventory).HasForeignKey(x => x.SupplierRef);
+            builder.HasOne(x => x.Fiscalyearref).WithMany(x => x.inventory).HasForeignKey(x => x.Fisicalyearref);
         }
     }
 }

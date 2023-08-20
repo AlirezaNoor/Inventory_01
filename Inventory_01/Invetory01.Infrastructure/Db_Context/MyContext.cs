@@ -1,5 +1,6 @@
 ﻿using Inventory.Domin.AddProductsToStore;
 using Inventory.Domin.Brand;
+using Inventory.Domin.Cardex;
 using Inventory.Domin.CategoryAgg;
 using Inventory.Domin.Cities;
 using Inventory.Domin.Costumer;
@@ -35,6 +36,7 @@ namespace Invetory01.Infrastructure.Db_Context
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<FiscalYaer> FiscalYaer { get; set; }
         public DbSet<StoreAgg> store{ get; set; }
+        public DbSet<Cardexes> cardex{ get; set; }
         public DbSet<AddProductTostore> AddProductTostores{ get; set; }
         public DbSet<InventoryVoucher_Shopping> InventoryVoucher{ get; set; }
         public DbSet<InventoryVoucheritemShopping> InventoryVoucheritem{ get; set; }

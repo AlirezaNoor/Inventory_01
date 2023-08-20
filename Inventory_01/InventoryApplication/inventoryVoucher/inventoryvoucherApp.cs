@@ -21,7 +21,7 @@ namespace InventoryApplication.inventoryVoucher
         public void createVoucher(CreateInventoryVoucher e)
         {
             var inventoryvoucher = new InventoryVoucher_Shopping(e.storeref, e.nummber, e.SupplierRef, e.Dates,
-                e.VoucherType, e.Description);
+                e.VoucherType, e.Description,e.fisicalyearref);
             _reposetory.Insert(inventoryvoucher);
             _reposetory.Save();
         }
@@ -46,7 +46,7 @@ namespace InventoryApplication.inventoryVoucher
         {
             var inventoryvoucher = _reposetory.GetById(e.Id);
             inventoryvoucher.Edited(e.storeref, e.nummber, e.SupplierRef, e.Dates,
-                e.VoucherType, e.Description);
+                e.VoucherType, e.Description, e.fisicalyearref);
 
             _reposetory.Save();
         }

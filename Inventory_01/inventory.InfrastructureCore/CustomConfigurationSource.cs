@@ -1,5 +1,6 @@
 ﻿using Inventory.Domin.AddProductsToStore;
 using Inventory.Domin.Brand;
+using Inventory.Domin.Cardex;
 using Inventory.Domin.CategoryAgg;
 using Inventory.Domin.Cities;
 using Inventory.Domin.Costumer;
@@ -13,6 +14,7 @@ using Inventory.Domin.Supliers;
 using Inventory.Domin.Units;
 using InventoryApplication.AddproductToStore;
 using InventoryApplication.BrandApplication;
+using InventoryApplication.Cardex;
 using InventoryApplication.Categores;
 using InventoryApplication.Cities;
 using InventoryApplication.Costumer;
@@ -27,6 +29,7 @@ using InventoryApplication.SupplierApp;
 using InventoryApplication.Unit;
 using InventoryApplicationContract.Addedproductstostore;
 using InventoryApplicationContract.BrandApplicationContract;
+using InventoryApplicationContract.Cardex;
 using InventoryApplicationContract.Categores;
 using InventoryApplicationContract.Cities;
 using InventoryApplicationContract.Costumer;
@@ -76,6 +79,8 @@ namespace inventory.InfrastructureCore
             builder.AddTransient<IInventoryVoucherApp, inventoryvoucherApp>();
             builder.AddTransient<IInventoryVocherItemReposetory, InventoryVocherItemReposetory>();
             builder.AddTransient<IInventoryVoucherItemApp, InventoryVoucherItemApp>();
+            builder.AddTransient<ICardexReposetory, CardexReposetory>();
+            builder.AddTransient<ICardexApp, CardexApp>();
         }
 
 

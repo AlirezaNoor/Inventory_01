@@ -1,6 +1,7 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 using Framework;
 using Inventory.Domin.AddProductsToStore;
+using Inventory.Domin.Cardex;
 using Inventory.Domin.InventoryVoucher;
 
 namespace Inventory.Domin.Stores
@@ -11,6 +12,8 @@ namespace Inventory.Domin.Stores
         public string StoreName { get; private set; }
         public List<AddProductTostore> AddProductTostores { get; set; }
         public List<InventoryVoucher_Shopping> inventory { get; set; }
+        public List<Cardexes> Cardexes { get; set; }
+
         public StoreAgg(long storeCode, string storeName)
         {
             StoreCode = storeCode;

@@ -29,6 +29,7 @@ namespace InventoryApplication.InventoryVoucherItemapp
                 myList.Add(new InventoryVoucheritemShopping(x.productsref, x.unitref, x.Quntity, x.Inventoryoucherref, x.Description));
             }
             _inventoryVocherItem.CreateInventoryvoucherRange(myList);
+            _inventoryVocherItem.Save();
         }
 
         public EditedInventoryVoucherItem voucher(long id)

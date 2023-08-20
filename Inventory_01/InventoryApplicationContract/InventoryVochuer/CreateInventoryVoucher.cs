@@ -8,6 +8,7 @@
         public DateTime Dates { get; set; }
         public int VoucherType { get; set; }
         public string Description { get;  set; }
+        public long fisicalyearref { get;  set; }
     }
 
  

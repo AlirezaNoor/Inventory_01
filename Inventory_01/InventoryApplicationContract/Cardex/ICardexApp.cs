@@ -8,6 +8,6 @@ namespace InventoryApplicationContract.Cardex
 {
     public interface ICardexApp
     {
-        void createCardex(CreateCardex cardex);
+        void createCardex(List<CreateCardex> cardex);
     }
 }

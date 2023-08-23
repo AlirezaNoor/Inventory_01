@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,5 +10,6 @@ namespace Inventory.Domin.Product
 {
     public interface IProductReposetory:IGenericReposetores<ProductsAgg,long>
     {
+        IList forinventory(long storeref);
     }
 }

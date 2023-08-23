@@ -12,6 +12,7 @@ namespace InventoryApplicationContract.Addedproductstostore
         EditedAddPtoS etdtials(long id);
         void edited(EditedAddPtoS e);
         List<AddPtoSViewmodel> getall();
+        List<AddPtoSViewmodel> getallininventory();
 
     }
 }

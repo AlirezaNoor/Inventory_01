@@ -55,5 +55,19 @@ namespace InventoryApplication.AddproductToStore
 
             }).ToList();
         }
+
+        public List<AddPtoSViewmodel> getallininventory()
+        {
+
+            return _reposetory.GetAll().Select(x => new AddPtoSViewmodel()
+            {
+                Id = x.Id,
+                ProductRef = _product.GetById(x.productRef).ProductName,
+                StoreRef = _store.GetById(x.storeRef).StoreName,
+                ProductReff = x.productRef,
+                StoreReff = x.storeRef
+
+            }).ToList();
+        }
     }
 }

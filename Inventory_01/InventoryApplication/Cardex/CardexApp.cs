@@ -17,7 +17,7 @@ namespace InventoryApplication.Cardex
             _reposetory = reposetory;
         }
 
-        public void createCardex(CreateCardex cardex)
+        public void createCardex(List<CreateCardex> cardex)
         {
 
             List<Cardexes> mycardex = new();
@@ -26,7 +26,7 @@ namespace InventoryApplication.Cardex
             {
                 mycardex.Add(new Cardexes(x.storeref,x.propductsref,x.transactiondate,x.vorodkhoroj,x.Quantity));
             }
-            _reposetory.Create(mycardex);
+            _reposetory.Create2(mycardex);
             _reposetory.Save();
         }
     }

@@ -1,4 +1,6 @@
-﻿using Inventory.Domin.Product;
+﻿using System.Collections;
+using Inventory.Domin.AddProductsToStore;
+using Inventory.Domin.Product;
 using InventoryApplicationContract.BrandApplicationContract;
 using InventoryApplicationContract.Categores;
 using InventoryApplicationContract.ProductContartct;
@@ -15,13 +17,15 @@ namespace InventoryApplication.Produts_Appliaction
         private readonly ICategoresApplictaion _categoresApplictaion;
         private readonly ISubCategoryApplication _subcategoresApplictaion;
         private readonly IUnitAplication _unit;
-        public ProdutsApplation(IProductReposetory reposetory, IBrandApplication brand, ICategoresApplictaion categoresApplictaion, ISubCategoryApplication subcategoresApplictaion, IUnitAplication unit)
+        private readonly IAddProductToStoreReposetory _addProductToStore;
+        public ProdutsApplation(IProductReposetory reposetory, IBrandApplication brand, ICategoresApplictaion categoresApplictaion, ISubCategoryApplication subcategoresApplictaion, IUnitAplication unit, IAddProductToStoreReposetory addProductToStore)
         {
             _reposetory = reposetory;
             _brand = brand;
             _categoresApplictaion = categoresApplictaion;
             _subcategoresApplictaion = subcategoresApplictaion;
             _unit = unit;
+            _addProductToStore = addProductToStore;
         }
         public List<productlistview> getAll()
         {
@@ -122,6 +126,11 @@ namespace InventoryApplication.Produts_Appliaction
 
 
             }).ToList();
+        }
+
+        public IList selectdtaiilswithstore(long storeref)
+        {
+            return _reposetory.forinventory(storeref);
         }
     }
 }

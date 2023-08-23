@@ -4,6 +4,6 @@ namespace Inventory.Domin.Cardex
 {
     public interface ICardexReposetory:IGenericReposetores<Cardexes,long>
     {
-        void Create(List<Cardexes> cardexes);
+        void Create2(List<Cardexes> cardexes);
     }
 }

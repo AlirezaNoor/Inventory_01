@@ -1,4 +1,6 @@
-﻿namespace InventoryApplicationContract.ProductContartct
+﻿using System.Collections;
+
+namespace InventoryApplicationContract.ProductContartct
 {
     public interface IProdutsApplation
     {
@@ -8,6 +10,7 @@
         void SaveEditedchaanges(Productsedited entity);
         productlistview getdtails(long id);
         List<productlistview> selectdtaiils();
-         
+        IList selectdtaiilswithstore(long storeref);
+
     }
 }

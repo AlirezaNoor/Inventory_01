@@ -19,7 +19,7 @@ public CardexReposetory( MyContext myContext) : base(myContext)
     _myContext = myContext;
 }
 
-public void Create(List<Cardexes> cardexes)
+public void Create2(List<Cardexes> cardexes)
 {
  _myContext.cardex.AddRange(cardexes);
 }
